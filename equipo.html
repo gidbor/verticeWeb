@@ -754,16 +754,68 @@
 .area-card span { background: linear-gradient(135deg, var(--magenta-soft), var(--cyan-soft)); color: var(--navy); }
 .cta-banner { background: radial-gradient(circle at 84% 42%, rgba(91,198,232,.35), transparent 18rem), linear-gradient(135deg, var(--navy2) 0%, var(--magenta) 100%); }
 
+
+
+/* Contacto completo por sedes */
+.footer-grid {
+  grid-template-columns: 1.1fr 0.85fr 0.95fr 1.55fr;
+}
+
+.office-list {
+  display: grid;
+  gap: 14px;
+}
+
+.office-card {
+  padding: 0 0 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.office-card:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.office-card strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--navy);
+  font-size: 0.98rem;
+  font-weight: 900;
+}
+
+.office-card span,
+.office-card a {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.office-card .office-label {
+  display: inline;
+  margin-right: 4px;
+  color: var(--magenta);
+  font-weight: 900;
+}
+
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
 <header class="site-header">
 <nav aria-label="Navegación principal" class="container nav" id="mainNav"><a aria-label="Vértice Formación Profesional" class="brand" href="index.html"><img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/></a>
 <div aria-label="Secciones del sitio" class="nav-links"><a href="index.html">Inicio</a>
+<a href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
 <a href="gamificacion.html">Gamificación</a>
 <a href="index.html#areas">Áreas</a>
-<a href="nosotros.html">Nosotros</a>
 <a class="active" href="equipo.html">Equipo</a>
 <a href="contacto.html">Contacto</a>
 </div><a class="btn btn-primary header-cta" href="contacto.html">Solicita información</a><button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú" class="mobile-toggle" type="button">☰</button>
@@ -868,10 +920,10 @@
 <div>
 <h4>Enlaces rápidos</h4>
 <div class="footer-links"><a href="index.html">Inicio</a>
+<a href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
 <a href="gamificacion.html">Gamificación</a>
 <a href="index.html#areas">Áreas</a>
-<a href="nosotros.html">Nosotros</a>
 <a href="equipo.html">Equipo</a>
 <a href="contacto.html">Contacto</a>
 </div>
@@ -885,13 +937,7 @@
 <a href="servicio-scorm-xapi.html">SCORM y xAPI</a>
 </div>
 </div>
-<div>
-<h4>Contacto</h4>
-<div class="contact-item"><span>☎</span><span>+57 320 301 3190</span></div>
-<div class="contact-item"><span>✉</span><span>boris.mejia@verticeformacionprofesional.com</span>
-</div>
-<div class="contact-item"><span>⌖</span><span>Bogotá, Colombia</span></div>
-</div>
+<div><h4>Contacto</h4><div class="office-list"><div class="office-card"><strong>Bogotá</strong><span><span class="office-label">Dirección:</span> Carrera. 9 No. 115-06 local 01</span><span><span class="office-label">WhatsApp:</span> (57) 3203013190</span><a href="mailto:boris.mejia@verticeformacionprofesional.com"><span class="office-label">Correo:</span> boris.mejia@verticeformacionprofesional.com</a></div><div class="office-card"><strong>Medellín</strong><span><span class="office-label">Dirección:</span> Carrera 27 D - 36 C Sur - 80</span><span><span class="office-label">WhatsApp:</span> (57) 3013256644</span><a href="mailto:lina.villa@verticeformacionprofesional.com"><span class="office-label">Correo:</span> lina.villa@verticeformacionprofesional.com</a></div><div class="office-card"><strong>Quito</strong><span><span class="office-label">Dirección:</span> Jambelí OE3-158 y la Unión</span><span><span class="office-label">WhatsApp:</span> (593) 969077207</span><a href="mailto:borismejia@istte.edu.ec"><span class="office-label">Correo:</span> borismejia@istte.edu.ec</a></div></div></div>
 </div>
 <div class="footer-bottom"><span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
 <div><a href="#">Política de privacidad</a><a href="#">Términos y condiciones</a></div>
