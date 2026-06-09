@@ -38,7 +38,7 @@
 
     body {
       margin: 0;
-      font-family: "Google Sans", "Product Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.5;
@@ -1012,6 +1012,143 @@
         max-width: 260px;
       }
     }
+
+
+/* Sección de aliados y clientes */
+.allies-section {
+  padding: 44px 0 58px;
+  background: #ffffff;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.allies-heading {
+  text-align: center;
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.logo-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: slide-left 38s linear infinite;
+}
+
+.logo-marquee:hover .logo-track {
+  animation-play-state: paused;
+}
+
+.client-logo {
+  min-width: 150px;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  color: var(--navy);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  box-shadow: 0 10px 24px rgba(28, 53, 94, 0.06);
+  white-space: nowrap;
+}
+
+@keyframes slide-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Áreas especializadas */
+.areas-section {
+  padding: 82px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.area-card {
+  min-height: 150px;
+  padding: 24px 18px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.area-card span {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  background: var(--magenta-soft);
+  font-size: 1.4rem;
+}
+
+.area-card h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 1100px) {
+  .areas-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .client-logo { min-width: 136px; min-height: 54px; font-size: 0.86rem; }
+}
+
+
+/* Ajustes de identidad ampliada */
+:root { --cyan: #5BC6E8; --cyan-soft: #e8f8fd; --navy2: #233e66; --rose: #e72862; }
+.accent-cyan { color: var(--cyan); }
+.gradient-title {
+  background: linear-gradient(90deg, #233e66 0%, #5BC6E8 48%, #e72862 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.underline { background: linear-gradient(90deg, var(--magenta), var(--cyan)); }
+.eyebrow { color: var(--cyan); }
+.eyebrow::before { background: linear-gradient(90deg, var(--magenta), var(--cyan)); }
+.btn-primary { background: linear-gradient(135deg, var(--magenta), #e72862); }
+.btn-outline:hover { border-color: var(--cyan); box-shadow: 0 10px 24px rgba(91,198,232,.18); }
+.line-icon, .benefit-icon, .solution-badge { border-color: rgba(91,198,232,.35); }
+.tech-badge span { color: var(--navy); background: var(--cyan-soft); }
+.client-logo img { max-height: 48px; max-width: 150px; object-fit: contain; filter: saturate(.96); }
+.client-logo.logo-placeholder { color: var(--navy); background: linear-gradient(135deg, #fff, var(--cyan-soft)); border-style: dashed; }
+.card-link { text-decoration: none; color: inherit; }
+.service-card.card-link, .area-card.card-link { cursor: pointer; }
+.service-card.card-link:hover h3, .area-card.card-link:hover h3 { color: var(--magenta); }
+.area-card span { background: linear-gradient(135deg, var(--magenta-soft), var(--cyan-soft)); color: var(--navy); }
+.cta-banner { background: radial-gradient(circle at 84% 42%, rgba(91,198,232,.35), transparent 18rem), linear-gradient(135deg, var(--navy2) 0%, var(--magenta) 100%); }
+
 </style>
 </head>
 <body>
@@ -1020,15 +1157,15 @@
 <a aria-label="Vértice Formación Profesional" class="brand" href="#inicio">
 <img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/>
 </a>
-<div aria-label="Secciones del sitio" class="nav-links">
-<a class="active" href="#inicio">Inicio</a>
-<a href="#servicios">Servicios</a>
-<a href="#soluciones">Soluciones</a>
-<a href="#tecnologias">Tecnologías</a>
+<div aria-label="Secciones del sitio" class="nav-links"><a class="active" href="index.html">Inicio</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="gamificacion.html">Gamificación</a>
+<a href="index.html#areas">Áreas</a>
 <a href="nosotros.html">Nosotros</a>
-<a href="#contacto">Contacto</a>
+<a href="equipo.html">Equipo</a>
+<a href="contacto.html">Contacto</a>
 </div>
-<a class="btn btn-primary header-cta" href="#contacto">Solicita información</a>
+<a class="btn btn-primary header-cta" href="contacto.html">Solicita información</a>
 <button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú" class="mobile-toggle" type="button">☰</button>
 </nav>
 </header>
@@ -1043,7 +1180,7 @@
             cursos por WhatsApp e integración con distintas tecnologías de aprendizaje.
           </p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="#contacto">Solicita información →</a>
+<a class="btn btn-primary" href="contacto.html">Solicita información →</a>
 <a class="btn btn-outline" href="#servicios">Conoce nuestros servicios</a>
 </div>
 <div class="trust-note">
@@ -1064,6 +1201,17 @@
 </div>
 </div>
 </section>
+<section aria-label="Aliados y clientes" class="allies-section">
+<div class="container">
+<h2 class="allies-heading">Aliados y clientes</h2>
+<p class="section-copy" style="text-align:center;margin-top:-18px;margin-bottom:24px;">Organizaciones que han confiado en nuestras soluciones de formación, contenidos y tecnología educativa.</p>
+</div>
+<div aria-hidden="true" class="logo-marquee">
+<div class="logo-track">
+<span class="client-logo"><img alt="Asopartes" src="assets/aliados/asopartes.png"/></span><span class="client-logo"><img alt="Ascolfa" src="assets/aliados/ascolfa.png"/></span><span class="client-logo"><img alt="ACIET" src="assets/aliados/idBx7AH2PA_logos.png"/></span><span class="client-logo"><img alt="Fodesep" src="assets/aliados/fodesep.png"/></span><span class="client-logo"><img alt="Cetec" src="assets/aliados/cetec.jpg"/></span><span class="client-logo"><img alt="Uniremington" src="assets/aliados/uniremintong.png"/></span><span class="client-logo"><img alt="Autofuel" src="assets/aliados/logo-autofuel.png"/></span><span class="client-logo"><img alt="U. San Mateo" src="assets/aliados/logo-sanmateo.png"/></span><span class="client-logo"><img alt="U Católica" src="assets/aliados/University_Cat#U00f3lica_of_Colombia_logo.svg.png"/></span><span class="client-logo"><img alt="UIDE" src="assets/aliados/logo-uide.webp"/></span><span class="client-logo"><img alt="U. CUN" src="assets/aliados/logo_cun.png"/></span><span class="client-logo"><img alt="Tecnoecuatoriano" src="assets/aliados/newlogotecno.png"/></span><span class="client-logo"><img alt="COEC" src="assets/aliados/logo-coec-21.png"/></span><span class="client-logo"><img alt="Colfecar" src="assets/aliados/pngegg.png"/></span><span class="client-logo"><img alt="Gesdatos" src="assets/aliados/qt=q_95.webp"/></span><span class="client-logo"><img alt="Hacku" src="assets/aliados/hacku.png"/></span><span class="client-logo"><img alt="Nubetours" src="assets/aliados/cropped-logo-1.png"/></span><span class="client-logo"><img alt="Texa" src="assets/aliados/texa-placeholder.png"/></span><span class="client-logo"><img alt="Treball" src="assets/aliados/treball-placeholder.png"/></span><span class="client-logo"><img alt="Asopartes" src="assets/aliados/asopartes.png"/></span><span class="client-logo"><img alt="Ascolfa" src="assets/aliados/ascolfa.png"/></span><span class="client-logo"><img alt="ACIET" src="assets/aliados/idBx7AH2PA_logos.png"/></span><span class="client-logo"><img alt="Fodesep" src="assets/aliados/fodesep.png"/></span><span class="client-logo"><img alt="Cetec" src="assets/aliados/cetec.jpg"/></span><span class="client-logo"><img alt="Uniremington" src="assets/aliados/uniremintong.png"/></span><span class="client-logo"><img alt="Autofuel" src="assets/aliados/logo-autofuel.png"/></span><span class="client-logo"><img alt="U. San Mateo" src="assets/aliados/logo-sanmateo.png"/></span><span class="client-logo"><img alt="U Católica" src="assets/aliados/University_Cat#U00f3lica_of_Colombia_logo.svg.png"/></span><span class="client-logo"><img alt="UIDE" src="assets/aliados/logo-uide.webp"/></span><span class="client-logo"><img alt="U. CUN" src="assets/aliados/logo_cun.png"/></span><span class="client-logo"><img alt="Tecnoecuatoriano" src="assets/aliados/newlogotecno.png"/></span><span class="client-logo"><img alt="COEC" src="assets/aliados/logo-coec-21.png"/></span><span class="client-logo"><img alt="Colfecar" src="assets/aliados/pngegg.png"/></span><span class="client-logo"><img alt="Gesdatos" src="assets/aliados/qt=q_95.webp"/></span><span class="client-logo"><img alt="Hacku" src="assets/aliados/hacku.png"/></span><span class="client-logo"><img alt="Nubetours" src="assets/aliados/cropped-logo-1.png"/></span><span class="client-logo"><img alt="Texa" src="assets/aliados/texa-placeholder.png"/></span><span class="client-logo"><img alt="Treball" src="assets/aliados/treball-placeholder.png"/></span>
+</div>
+</div>
+</section>
 <section class="section-soft" id="servicios">
 <div class="container">
 <div class="section-heading">
@@ -1072,35 +1220,56 @@
 <p class="section-copy">Soluciones claras para implementar, actualizar y escalar experiencias de aprendizaje digital.</p>
 </div>
 <div class="services-grid">
-<article class="service-card">
-<div aria-hidden="true" class="line-icon"><img alt="Plataforma LMS" class="icon-img" src="assets/icons/icono-plataforma-lms.png"/></div>
+<a class="service-card card-link" href="servicio-plataforma-lms.html">
+<div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-plataforma-lms.png"/></div>
 <h3>Plataforma LMS</h3>
-<p>Gestión integral del aprendizaje en un solo lugar.</p>
-</article>
-<article class="service-card">
-<div aria-hidden="true" class="line-icon"><img alt="Creación y digitalización de contenidos" class="icon-img" src="assets/icons/icono-digitalizacion-contenidos.png"/></div>
+<p>Implementamos una plataforma LMS para centralizar cursos, usuarios, rutas, evidencias, certificados y reportes.</p>
+</a>
+<a class="service-card card-link" href="servicio-digitalizacion-contenidos.html">
+<div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-digitalizacion-contenidos.png"/></div>
 <h3>Creación y digitalización de contenidos</h3>
-<p>Contenidos relevantes y adaptados a tus necesidades.</p>
-</article>
-<article class="service-card">
-<div aria-hidden="true" class="line-icon"><img alt="Cursos en WhatsApp" class="icon-img" src="assets/icons/icono-cursos-whatsapp.png"/></div>
+<p>Convertimos documentos, presentaciones, manuales y procesos internos en experiencias formativas digitales.</p>
+</a>
+<a class="service-card card-link" href="servicio-cursos-whatsapp.html">
+<div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-cursos-whatsapp.png"/></div>
 <h3>Cursos en WhatsApp</h3>
-<p>Aprendizaje accesible donde tus usuarios ya están.</p>
-</article>
-<article class="service-card">
-<div aria-hidden="true" class="line-icon"><img alt="LMS flexible" class="icon-img" src="assets/icons/icono-lms-flexible.png"/></div>
+<p>Diseñamos microcápsulas y experiencias de aprendizaje distribuidas por WhatsApp para ampliar alcance y participación.</p>
+</a>
+<a class="service-card card-link" href="servicio-lms-flexible.html">
+<div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-lms-flexible.png"/></div>
 <h3>LMS flexible</h3>
-<p>Una plataforma adaptable a tus procesos y modelo de formación.</p>
-</article>
-<article class="service-card">
-<div aria-hidden="true" class="line-icon"><img alt="SCORM y xAPI" class="icon-img" src="assets/icons/icono-scorm-xapi.png"/></div>
+<p>Adaptamos la plataforma a diferentes modelos de formación: académico, corporativo, gremial o institucional.</p>
+</a>
+<a class="service-card card-link" href="servicio-scorm-xapi.html">
+<div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-scorm-xapi.png"/></div>
 <h3>SCORM y xAPI</h3>
-<p>Compatibilidad con estándares e integración avanzada.</p>
-</article>
+<p>Convertimos y empaquetamos contenidos para facilitar su instalación y seguimiento en plataformas LMS.</p>
+</a>
 </div>
 </div>
 </section>
-<section id="tecnologias">
+<section class="areas-section" id="areas">
+<div class="container">
+<div class="section-heading">
+<h2>Áreas especializadas</h2>
+<div class="underline"></div>
+<p class="section-copy">Creamos digitalizaciones, recursos y rutas e-learning para sectores con necesidades técnicas y operativas específicas.</p>
+</div>
+<div class="areas-grid">
+<a class="area-card card-link" href="area-automotriz.html"><span aria-hidden="true">🚗</span><h3>Automotriz</h3></a><a class="area-card card-link" href="area-sostenibilidad.html"><span aria-hidden="true">🌱</span><h3>Sostenibilidad</h3></a><a class="area-card card-link" href="area-climatizacion-refrigeracion.html"><span aria-hidden="true">❄️</span><h3>Climatización y refrigeración</h3></a><a class="area-card card-link" href="area-logistica.html"><span aria-hidden="true">🚚</span><h3>Logística</h3></a><a class="area-card card-link" href="area-ciberseguridad.html"><span aria-hidden="true">🔐</span><h3>Ciberseguridad</h3></a><a class="area-card card-link" href="area-formacion-profesional.html"><span aria-hidden="true">🎓</span><h3>Formación Profesional</h3></a>
+</div>
+</div>
+</section>
+<section class="section-soft" id="gamificacion-home">
+<div class="container tech-panel">
+<div class="section-heading">
+<h2 class="gradient-title">Gamificación para aumentar participación</h2>
+<div class="underline"></div>
+<p class="section-copy">Integramos insignias, medallas, puntos, rachas, misiones y retos para motivar el avance de los estudiantes sin sobrecargar la experiencia.</p>
+</div>
+<div style="text-align:center"><a class="btn btn-primary" href="gamificacion.html">Ver solución de gamificación →</a></div>
+</div>
+</section><section id="tecnologias">
 <div class="container tech-panel">
 <div class="section-heading">
 <h2>Integramos tu aprendizaje con distintas tecnologías</h2>
@@ -1158,7 +1327,7 @@
 <div aria-hidden="true" class="solution-badge">🏛</div>
 <h3>Instituciones educativas</h3>
 <p>Apoyamos a instituciones en la transformación digital de su oferta académica y programas de formación.</p>
-<a class="text-link" href="#contacto">Conocer más →</a>
+<a class="text-link" href="contacto.html">Conocer más →</a>
 </div>
 </article>
 <article class="solution-card">
@@ -1167,7 +1336,7 @@
 <div aria-hidden="true" class="solution-badge">💼</div>
 <h3>Empresas</h3>
 <p>Impulsamos el desarrollo del talento con soluciones de formación alineadas a objetivos de negocio.</p>
-<a class="text-link" href="#contacto">Conocer más →</a>
+<a class="text-link" href="contacto.html">Conocer más →</a>
 </div>
 </article>
 <article class="solution-card">
@@ -1176,7 +1345,7 @@
 <div aria-hidden="true" class="solution-badge">👥</div>
 <h3>Proyectos de formación</h3>
 <p>Acompañamos iniciativas de formación con tecnología, contenidos y procesos efectivos.</p>
-<a class="text-link" href="#contacto">Conocer más →</a>
+<a class="text-link" href="contacto.html">Conocer más →</a>
 </div>
 </article>
 </div>
@@ -1189,7 +1358,7 @@
 <h2>Conversemos sobre tu proyecto de formación</h2>
 <p>Diseñamos soluciones e-learning alineadas con tus objetivos.</p>
 </div>
-<a class="btn" href="mailto:info@verticeformacion.com">Hablar con un asesor →</a>
+<a class="btn" href="contacto.html">Hablar con un asesor →</a>
 </div>
 </div>
 </section>
@@ -1209,29 +1378,28 @@
 </div>
 <div>
 <h4>Enlaces rápidos</h4>
-<div class="footer-links">
-<a href="#inicio">Inicio</a>
-<a href="#servicios">Servicios</a>
-<a href="#soluciones">Soluciones</a>
-<a href="#tecnologias">Tecnologías</a>
-<a href="#nosotros">Nosotros</a>
-<a href="#contacto">Contacto</a>
+<div class="footer-links"><a href="index.html">Inicio</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="gamificacion.html">Gamificación</a>
+<a href="index.html#areas">Áreas</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="equipo.html">Equipo</a>
+<a href="contacto.html">Contacto</a>
 </div>
 </div>
 <div>
 <h4>Servicios</h4>
-<div class="footer-links">
-<a href="#servicios">Plataforma LMS</a>
-<a href="#servicios">Creación y digitalización de contenidos</a>
-<a href="#servicios">Cursos en WhatsApp</a>
-<a href="#servicios">LMS flexible</a>
-<a href="#servicios">SCORM y xAPI</a>
+<div class="footer-links"><a href="servicio-plataforma-lms.html">Plataforma LMS</a>
+<a href="servicio-digitalizacion-contenidos.html">Creación y digitalización de contenidos</a>
+<a href="servicio-cursos-whatsapp.html">Cursos en WhatsApp</a>
+<a href="servicio-lms-flexible.html">LMS flexible</a>
+<a href="servicio-scorm-xapi.html">SCORM y xAPI</a>
 </div>
 </div>
 <div>
 <h4>Contacto</h4>
-<div class="contact-item"><span>☎</span><span>+57 310 123 4567</span></div>
-<div class="contact-item"><span>✉</span><span>info@verticeformacion.com</span></div>
+<div class="contact-item"><span>☎</span><span>+57 320 301 3190</span></div>
+<div class="contact-item"><span>✉</span><span>boris.mejia@verticeformacionprofesional.com</span></div>
 <div class="contact-item"><span>⌖</span><span>Bogotá, Colombia</span></div>
 </div>
 </div>

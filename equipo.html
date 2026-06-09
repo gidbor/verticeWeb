@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equipo directivo | Vértice Formación Profesional</title>
+<meta content="Conoce el equipo directivo de Vértice Formación Profesional." name="description"/>
+<style>
+        :root {
+            --navy: #1c355e;
+            --magenta: #e6004d;
+            --magenta-dark: #c90043;
+            --magenta-soft: #fff0f5;
+            --navy-soft: #eef3fb;
+            --text: #1c355e;
+            --muted: #5f6f89;
+            --muted-2: #8a97aa;
+            --line: #e7edf5;
+            --bg: #ffffff;
+            --bg-soft: #f7f9fc;
+            --surface: #ffffff;
+            --shadow: 0 20px 55px rgba(28, 53, 94, .10);
+            --shadow-soft: 0 12px 35px rgba(28, 53, 94, .08);
+            --radius-xl: 34px;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --max: 1180px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit
+        }
+
+        .container {
+            width: min(var(--max), calc(100% - 44px));
+            margin: 0 auto
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, .92);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(231, 237, 245, .78)
+        }
+
+        .nav {
+            min-height: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            flex: 0 0 auto
+        }
+
+        .brand-logo {
+            width: auto;
+            height: 62px;
+            max-width: 290px;
+            object-fit: contain
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-left: auto;
+            font-size: .92rem;
+            font-weight: 700;
+            color: var(--navy)
+        }
+
+        .nav-links a {
+            position: relative;
+            padding: 34px 0
+        }
+
+        .nav-links a.active::after,
+        .nav-links a:hover::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 22px;
+            height: 3px;
+            border-radius: 999px;
+            background: var(--magenta)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 0 22px;
+            border-radius: 14px;
+            border: 1px solid transparent;
+            font: inherit;
+            font-size: .94rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 180ms ease;
+            white-space: nowrap
+        }
+
+        .btn-primary {
+            color: #fff;
+            background: var(--magenta);
+            box-shadow: 0 16px 34px rgba(230, 0, 77, .22)
+        }
+
+        .btn-primary:hover {
+            background: var(--magenta-dark);
+            transform: translateY(-2px)
+        }
+
+        .btn-outline {
+            color: var(--navy);
+            background: #fff;
+            border-color: rgba(28, 53, 94, .25);
+            box-shadow: 0 10px 24px rgba(28, 53, 94, .06)
+        }
+
+        .mobile-toggle {
+            display: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--navy);
+            font-size: 1.45rem;
+            cursor: pointer
+        }
+
+        .hero {
+            padding: 86px 0 64px;
+            background: radial-gradient(circle at 10% 18%, rgba(230, 0, 77, .05), transparent 30rem), linear-gradient(180deg, #fff, #f8fafc)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 56px;
+            align-items: start
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            color: var(--magenta);
+            font-size: .82rem;
+            font-weight: 900;
+            letter-spacing: .12em;
+            text-transform: uppercase
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 32px;
+            height: 2px;
+            border-radius: 999px;
+            background: var(--magenta)
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0
+        }
+
+        h1 {
+            max-width: 640px;
+            margin-bottom: 20px;
+            color: var(--navy);
+            font-size: clamp(2.4rem, 4.7vw, 4.3rem);
+            line-height: 1;
+            letter-spacing: -.05em
+        }
+
+        .accent {
+            color: var(--magenta)
+        }
+
+        .hero-copy {
+            max-width: 600px;
+            color: #40506a;
+            font-size: 1.08rem
+        }
+
+        .contact-card,
+        .office-card,
+        .form-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft)
+        }
+
+        .contact-card {
+            padding: 28px
+        }
+
+        .contact-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--navy)
+        }
+
+        .contact-card p {
+            color: var(--muted);
+            margin-bottom: 22px
+        }
+
+        .quick-list {
+            display: grid;
+            gap: 12px
+        }
+
+        .quick-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 14px;
+            border-radius: 16px;
+            background: var(--bg-soft);
+            color: var(--muted);
+            font-weight: 700
+        }
+
+        .quick-item span:first-child {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            flex: 0 0 auto;
+            border-radius: 12px;
+            background: var(--magenta-soft);
+            color: var(--magenta)
+        }
+
+        section {
+            padding: 72px 0
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 42px;
+            text-align: center
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: var(--navy);
+            font-size: clamp(2rem, 3.3vw, 3.1rem);
+            line-height: 1.08;
+            letter-spacing: -.045em
+        }
+
+        .underline {
+            width: 46px;
+            height: 4px;
+            margin: 0 auto 20px;
+            border-radius: 999px;
+            background: var(--magenta)
+        }
+
+        .section-copy {
+            color: var(--muted);
+            font-size: 1.05rem;
+            margin-bottom: 0
+        }
+
+        .offices-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px
+        }
+
+        .office-card {
+            padding: 28px;
+            display: grid;
+            gap: 14px
+        }
+
+        .office-card h3 {
+            margin: 0;
+            color: var(--navy);
+            font-size: 1.4rem
+        }
+
+        .office-line {
+            display: flex;
+            gap: 12px;
+            color: var(--muted);
+            font-weight: 700
+        }
+
+        .office-line b {
+            color: var(--navy)
+        }
+
+        .office-line span:first-child {
+            color: var(--magenta);
+            font-weight: 900
+        }
+
+        .form-section {
+            background: linear-gradient(180deg, #f8fafc, #fff)
+        }
+
+        .form-layout {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 28px;
+            align-items: start
+        }
+
+        .form-card {
+            padding: 32px
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .form-field {
+            display: grid;
+            gap: 7px
+        }
+
+        .form-field.full {
+            grid-column: 1/-1
+        }
+
+        .form-field label {
+            color: var(--navy);
+            font-size: .9rem;
+            font-weight: 900
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 13px 14px;
+            color: var(--navy);
+            background: #fff;
+            outline: none
+        }
+
+        .form-field textarea {
+            min-height: 132px;
+            resize: vertical
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: rgba(230, 0, 77, .5);
+            box-shadow: 0 0 0 4px rgba(230, 0, 77, .08)
+        }
+
+        .check-field {
+            grid-column: 1/-1;
+            display: flex;
+            gap: 10px;
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        .check-field input {
+            margin-top: 4px
+        }
+
+        .form-message {
+            display: none;
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: #ecfdf5;
+            color: #17684d;
+            font-weight: 800
+        }
+
+        .cta-banner {
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 32px;
+            align-items: center;
+            min-height: 240px;
+            padding: 44px 52px;
+            border-radius: var(--radius-xl);
+            color: #fff;
+            background: linear-gradient(135deg, var(--magenta) 0%, #c50043 62%, #991b44 100%);
+            box-shadow: 0 24px 70px rgba(230, 0, 77, .22)
+        }
+
+        .cta-banner h2 {
+            color: #fff
+        }
+
+        .cta-banner p {
+            color: rgba(255, 255, 255, .84);
+            margin: 0
+        }
+
+        .cta-banner .btn {
+            background: #fff;
+            color: var(--magenta)
+        }
+
+        .footer {
+            padding: 68px 0 30px;
+            background: linear-gradient(180deg, #fff, #f8fafc)
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr .9fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 42px;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .footer .brand {
+            margin-bottom: 18px
+        }
+
+        .footer p {
+            color: var(--muted);
+            margin-bottom: 20px;
+            font-size: .94rem
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px
+        }
+
+        .socials a {
+            width: 36px;
+            height: 36px;
+            display: grid;
+            place-items: center;
+            border-radius: 999px;
+            color: #fff;
+            background: var(--navy);
+            font-weight: 800;
+            font-size: .85rem
+        }
+
+        .footer h4 {
+            margin: 0 0 16px;
+            color: var(--navy);
+            font-size: .98rem
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 10px
+        }
+
+        .footer-links a,
+        .contact-item {
+            color: var(--muted);
+            font-size: .93rem
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px
+        }
+
+        .contact-item span:first-child {
+            color: var(--magenta);
+            font-weight: 900
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding-top: 24px;
+            color: var(--muted-2);
+            font-size: .84rem
+        }
+
+        .footer-bottom div {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap
+        }
+
+        @media(max-width:1100px) {
+
+            .nav-links,
+            .header-cta {
+                display: none
+            }
+
+            .mobile-toggle {
+                display: inline-grid;
+                place-items: center
+            }
+
+            .nav.is-open {
+                align-items: flex-start
+            }
+
+            .nav.is-open .nav-links {
+                position: absolute;
+                left: 22px;
+                right: 22px;
+                top: 92px;
+                display: grid;
+                gap: 0;
+                padding: 14px 18px;
+                background: #fff;
+                border: 1px solid var(--line);
+                border-radius: 20px;
+                box-shadow: var(--shadow)
+            }
+
+            .nav.is-open .nav-links a {
+                padding: 14px 0
+            }
+
+            .hero-grid,
+            .form-layout {
+                grid-template-columns: 1fr
+            }
+
+            .offices-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:760px) {
+            .container {
+                width: min(100% - 28px, var(--max))
+            }
+
+            .brand-logo {
+                height: 48px;
+                max-width: 220px
+            }
+
+            .nav {
+                min-height: 78px
+            }
+
+            .hero {
+                padding: 56px 0
+            }
+
+            .form-grid,
+            .offices-grid,
+            .footer-grid,
+            .cta-banner {
+                grid-template-columns: 1fr
+            }
+
+            .cta-banner,
+            .form-card,
+            .contact-card {
+                padding: 24px
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start
+            }
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px
+        }
+
+        .team-card {
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            transition: 180ms ease
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 64px rgba(28, 53, 94, .13)
+        }
+
+        .team-photo {
+            height: 255px;
+            background-size: cover;
+            background-position: center;
+            position: relative
+        }
+
+        .team-photo::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 45%, rgba(28, 53, 94, .26))
+        }
+
+        .team-content {
+            padding: 26px
+        }
+
+        .team-content h3 {
+            margin: 0 0 5px;
+            color: var(--navy);
+            font-size: 1.15rem
+        }
+
+        .role {
+            display: block;
+            margin-bottom: 14px;
+            color: var(--magenta);
+            font-weight: 900
+        }
+
+        .team-content p {
+            color: var(--muted);
+            margin: 0;
+            font-size: .94rem
+        }
+
+        .team-note {
+            margin-top: 34px;
+            padding: 24px;
+            border-radius: var(--radius-lg);
+            background: var(--navy-soft);
+            color: var(--navy);
+            font-weight: 800;
+            text-align: center
+        }
+
+        .team-photo.boris {
+            background-image: url('assets/team/bmejia.jpeg')
+        }
+
+        .team-photo.lina {
+            background-image: url('assets/team/lma.jpeg')
+        }
+
+        .team-photo.angelica {
+            background-image: url('assets/team/asalamanca.jpeg')
+        }
+
+        .team-photo.arturo {
+            background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=85')
+        }
+
+        .team-photo.sebastian {
+            background-image: url('assets/team/smejia.jpeg')
+        }
+
+        .team-photo.antonia {
+            background-image: url('assets/team/lm.jpeg')
+        }
+
+        @media(max-width:980px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:640px) {
+            .team-grid {
+                grid-template-columns: 1fr
+            }
+
+            .team-photo {
+                height: 230px
+            }
+        }
+    
+/* Ajustes de identidad ampliada */
+:root { --cyan: #5BC6E8; --cyan-soft: #e8f8fd; --navy2: #233e66; --rose: #e72862; }
+.accent-cyan { color: var(--cyan); }
+.gradient-title {
+  background: linear-gradient(90deg, #233e66 0%, #5BC6E8 48%, #e72862 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.underline { background: linear-gradient(90deg, var(--magenta), var(--cyan)); }
+.eyebrow { color: var(--cyan); }
+.eyebrow::before { background: linear-gradient(90deg, var(--magenta), var(--cyan)); }
+.btn-primary { background: linear-gradient(135deg, var(--magenta), #e72862); }
+.btn-outline:hover { border-color: var(--cyan); box-shadow: 0 10px 24px rgba(91,198,232,.18); }
+.line-icon, .benefit-icon, .solution-badge { border-color: rgba(91,198,232,.35); }
+.tech-badge span { color: var(--navy); background: var(--cyan-soft); }
+.client-logo img { max-height: 48px; max-width: 150px; object-fit: contain; filter: saturate(.96); }
+.client-logo.logo-placeholder { color: var(--navy); background: linear-gradient(135deg, #fff, var(--cyan-soft)); border-style: dashed; }
+.card-link { text-decoration: none; color: inherit; }
+.service-card.card-link, .area-card.card-link { cursor: pointer; }
+.service-card.card-link:hover h3, .area-card.card-link:hover h3 { color: var(--magenta); }
+.area-card span { background: linear-gradient(135deg, var(--magenta-soft), var(--cyan-soft)); color: var(--navy); }
+.cta-banner { background: radial-gradient(circle at 84% 42%, rgba(91,198,232,.35), transparent 18rem), linear-gradient(135deg, var(--navy2) 0%, var(--magenta) 100%); }
+
+</style>
+</head>
+<body>
+<header class="site-header">
+<nav aria-label="Navegación principal" class="container nav" id="mainNav"><a aria-label="Vértice Formación Profesional" class="brand" href="index.html"><img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/></a>
+<div aria-label="Secciones del sitio" class="nav-links"><a href="index.html">Inicio</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="gamificacion.html">Gamificación</a>
+<a href="index.html#areas">Áreas</a>
+<a href="nosotros.html">Nosotros</a>
+<a class="active" href="equipo.html">Equipo</a>
+<a href="contacto.html">Contacto</a>
+</div><a class="btn btn-primary header-cta" href="contacto.html">Solicita información</a><button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú" class="mobile-toggle" type="button">☰</button>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Equipo</div>
+<h1>Equipo directivo de <span class="accent">Vértice Formación Profesional</span></h1>
+<p class="hero-copy">Un equipo multidisciplinario que integra gestión, tecnología, proyectos,
+                        sistemas, desarrollo de negocios y comunicación para acompañar soluciones e-learning de alto
+                        impacto.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="contacto.html">Hablar con un asesor
+                            →</a><a class="btn btn-outline" href="nosotros.html">Conocer la empresa</a></div>
+</div>
+<aside class="contact-card">
+<h2>Experiencia aplicada a cada proyecto</h2>
+<p>Nuestro equipo combina visión estratégica, ejecución operativa y conocimiento técnico para
+                        diseñar experiencias de aprendizaje alineadas con los objetivos de cada organización.</p>
+<div class="quick-list">
+<div class="quick-item"><span>✓</span><b>Dirección estratégica</b></div>
+<div class="quick-item"><span>✓</span><b>Gestión de proyectos</b></div>
+<div class="quick-item"><span>✓</span><b>Tecnología educativa</b></div>
+</div>
+</aside>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-heading">
+<h2>Equipo directivo</h2>
+<div class="underline"></div>
+</div>
+<div class="team-grid">
+<article class="team-card">
+<div aria-label="Foto de Boris Mejía B." class="team-photo boris" role="img"></div>
+<div class="team-content">
+<h3>Boris Mejía B.</h3><span class="role">Director General</span>
+<p>Lidera la estrategia y visión de Vértice Formación Profesional, impulsando soluciones innovadoras de aprendizaje digital que fortalecen el desarrollo del talento humano y la transformación de los procesos de formación en organizaciones e instituciones.</p>
+</div>
+</article>
+<article class="team-card">
+<div aria-label="Foto de Lina Villa H." class="team-photo lina" role="img"></div>
+<div class="team-content">
+<h3>Lina Villa H.</h3><span class="role">Directora de Proyectos</span>
+<p>Coordina la planificación y ejecución de proyectos de formación virtual, garantizando la calidad, el cumplimiento de objetivos y la implementación efectiva de soluciones e-learning adaptadas a las necesidades de cada cliente.</p>
+</div>
+</article>
+<article class="team-card">
+<div aria-label="Foto de Angélica Salamanca" class="team-photo sebastian" role="img"></div>
+<div class="team-content">
+<h3>Sebastián Mejía M.</h3><span class="role">Desarrollo de Negocios</span>
+<p>Impulsa el crecimiento de la organización mediante la identificación de oportunidades, el fortalecimiento de alianzas estratégicas y la generación de soluciones de formación digital alineadas con los objetivos de cada cliente.</p>
+</div>
+</article>
+<article class="team-card">
+<div aria-label="Foto de Arturo García" class="team-photo arturo" role="img"></div>
+<div class="team-content">
+<h3>Arturo García</h3><span class="role">Sistemas</span>
+<p>Gestiona la infraestructura tecnológica y el soporte de las soluciones digitales, asegurando la estabilidad, disponibilidad y óptimo funcionamiento de las plataformas y entornos virtuales de aprendizaje.</p>
+</div>
+</article>
+<article class="team-card">
+<div aria-label="Foto de Sebastián Mejía M." class="team-photo angelica" role="img"></div>
+<div class="team-content">
+<h3>Angélica Salamanca</h3><span class="role">Directora TIC</span>
+<p>Dirige la estrategia tecnológica de la organización, integrando plataformas LMS, herramientas digitales y soluciones innovadoras que potencian experiencias de aprendizaje virtual seguras, eficientes y escalables.</p>
+</div>
+</article>
+<article class="team-card">
+<div aria-label="Foto de Antonia Méndez V." class="team-photo antonia" role="img"></div>
+<div class="team-content">
+<h3>Antonia Méndez V.</h3><span class="role">Community Manager</span>
+<p>Fortalece la presencia digital de Vértice Formación Profesional mediante estrategias de comunicación, creación de contenido y gestión de comunidades, promoviendo el valor de la formación virtual y el aprendizaje continuo.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="cta-banner">
+<div>
+<h2>Trabajemos juntos en tu próximo proyecto</h2>
+<p>Conversemos sobre tus necesidades de formación online, contenidos, LMS o integración
+                            tecnológica.</p>
+</div><a class="btn" href="contacto.html">Contactar equipo →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div><a aria-label="Vértice Formación Profesional" class="brand" href="index.html"><img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/></a>
+<p>Creamos experiencias de aprendizaje digital que conectan con las personas y generan resultados.
+                    </p>
+<div aria-label="Redes sociales" class="socials"><a aria-label="LinkedIn" href="#">in</a><a aria-label="Facebook" href="#">f</a><a aria-label="Instagram" href="#">ig</a><a aria-label="YouTube" href="#">▶</a></div>
+</div>
+<div>
+<h4>Enlaces rápidos</h4>
+<div class="footer-links"><a href="index.html">Inicio</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="gamificacion.html">Gamificación</a>
+<a href="index.html#areas">Áreas</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="equipo.html">Equipo</a>
+<a href="contacto.html">Contacto</a>
+</div>
+</div>
+<div>
+<h4>Servicios</h4>
+<div class="footer-links"><a href="servicio-plataforma-lms.html">Plataforma LMS</a>
+<a href="servicio-digitalizacion-contenidos.html">Creación y digitalización de contenidos</a>
+<a href="servicio-cursos-whatsapp.html">Cursos en WhatsApp</a>
+<a href="servicio-lms-flexible.html">LMS flexible</a>
+<a href="servicio-scorm-xapi.html">SCORM y xAPI</a>
+</div>
+</div>
+<div>
+<h4>Contacto</h4>
+<div class="contact-item"><span>☎</span><span>+57 320 301 3190</span></div>
+<div class="contact-item"><span>✉</span><span>boris.mejia@verticeformacionprofesional.com</span>
+</div>
+<div class="contact-item"><span>⌖</span><span>Bogotá, Colombia</span></div>
+</div>
+</div>
+<div class="footer-bottom"><span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
+<div><a href="#">Política de privacidad</a><a href="#">Términos y condiciones</a></div>
+</div>
+</div>
+</footer>
+<script>const nav = document.getElementById('mainNav'); const toggle = document.querySelector('.mobile-toggle'); toggle?.addEventListener('click', () => { const isOpen = nav.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', String(isOpen)); toggle.textContent = isOpen ? '×' : '☰'; });</script>
+</body>
+</html>

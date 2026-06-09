@@ -1,15 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nosotros | Vértice Formación Profesional</title>
-  <meta
-    name="description"
-    content="Conoce a Vértice Formación Profesional: especialistas en e-learning, tecnología educativa, diseño instruccional, LMS, SCORM, contenidos digitales y soluciones formativas personalizadas."
-  />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nosotros | Vértice Formación Profesional</title>
+<meta content="Conoce a Vértice Formación Profesional: especialistas en e-learning, tecnología educativa, diseño instruccional, LMS, SCORM, contenidos digitales y soluciones formativas personalizadas." name="description"/>
+<style>
     :root {
       --navy: #1c355e;
       --navy-2: #102849;
@@ -820,274 +817,275 @@
       .icon-img { width: 32px; height: 32px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
-  </style>
+  
+/* Ajustes de identidad ampliada */
+:root { --cyan: #5BC6E8; --cyan-soft: #e8f8fd; --navy2: #233e66; --rose: #e72862; }
+.accent-cyan { color: var(--cyan); }
+.gradient-title {
+  background: linear-gradient(90deg, #233e66 0%, #5BC6E8 48%, #e72862 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.underline { background: linear-gradient(90deg, var(--magenta), var(--cyan)); }
+.eyebrow { color: var(--cyan); }
+.eyebrow::before { background: linear-gradient(90deg, var(--magenta), var(--cyan)); }
+.btn-primary { background: linear-gradient(135deg, var(--magenta), #e72862); }
+.btn-outline:hover { border-color: var(--cyan); box-shadow: 0 10px 24px rgba(91,198,232,.18); }
+.line-icon, .benefit-icon, .solution-badge { border-color: rgba(91,198,232,.35); }
+.tech-badge span { color: var(--navy); background: var(--cyan-soft); }
+.client-logo img { max-height: 48px; max-width: 150px; object-fit: contain; filter: saturate(.96); }
+.client-logo.logo-placeholder { color: var(--navy); background: linear-gradient(135deg, #fff, var(--cyan-soft)); border-style: dashed; }
+.card-link { text-decoration: none; color: inherit; }
+.service-card.card-link, .area-card.card-link { cursor: pointer; }
+.service-card.card-link:hover h3, .area-card.card-link:hover h3 { color: var(--magenta); }
+.area-card span { background: linear-gradient(135deg, var(--magenta-soft), var(--cyan-soft)); color: var(--navy); }
+.cta-banner { background: radial-gradient(circle at 84% 42%, rgba(91,198,232,.35), transparent 18rem), linear-gradient(135deg, var(--navy2) 0%, var(--magenta) 100%); }
+
+</style>
 </head>
-
 <body>
-  <header class="site-header">
-    <nav class="container nav" id="mainNav" aria-label="Navegación principal">
-      <a href="index.html#inicio" class="brand" aria-label="Vértice Formación Profesional">
-        <img src="assets/logo-vertice.png" alt="Vértice Formación Profesional" class="brand-logo" />
-      </a>
-
-      <div class="nav-links" aria-label="Secciones del sitio">
-        <a href="index.html#inicio">Inicio</a>
-        <a href="index.html#servicios">Servicios</a>
-        <a href="index.html#soluciones">Soluciones</a>
-        <a href="index.html#tecnologias">Tecnologías</a>
-        <a href="nosotros.html" class="active">Nosotros</a>
-        <a href="index.html#contacto">Contacto</a>
-      </div>
-
-      <a href="index.html#contacto" class="btn btn-primary header-cta">Solicita información</a>
-      <button class="mobile-toggle" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">☰</button>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="eyebrow">Quiénes somos</div>
-          <h1>Especialistas en <span class="accent">formación online</span> y tecnología educativa</h1>
-          <p class="hero-copy">
+<header class="site-header">
+<nav aria-label="Navegación principal" class="container nav" id="mainNav">
+<a aria-label="Vértice Formación Profesional" class="brand" href="index.html#inicio">
+<img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/>
+</a>
+<div aria-label="Secciones del sitio" class="nav-links"><a href="index.html">Inicio</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="gamificacion.html">Gamificación</a>
+<a href="index.html#areas">Áreas</a>
+<a class="active" href="nosotros.html">Nosotros</a>
+<a href="equipo.html">Equipo</a>
+<a href="contacto.html">Contacto</a>
+</div>
+<a class="btn btn-primary header-cta" href="contacto.html">Solicita información</a>
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú" class="mobile-toggle" type="button">☰</button>
+</nav>
+</header>
+<main>
+<section class="hero" id="inicio">
+<div class="container hero-grid">
+<div class="hero-content">
+<div class="eyebrow">Quiénes somos</div>
+<h1>Especialistas en <span class="accent">formación online</span> y tecnología educativa</h1>
+<p class="hero-copy">
             Diseñamos, desarrollamos e implementamos soluciones e-learning para instituciones educativas, empresas,
             gremios, asociaciones y entidades públicas. Integramos tecnología, innovación, pedagogía y experiencia de usuario
             para crear aprendizajes efectivos, accesibles y escalables.
           </p>
-          <div class="hero-actions">
-            <a href="#propuesta" class="btn btn-primary">Conocer propuesta de valor →</a>
-            <a href="#apoyamos" class="btn btn-outline">Ver a quiénes apoyamos</a>
-          </div>
-        </div>
-
-        <div class="hero-panel" aria-label="Resumen de experiencia de Vértice Formación Profesional">
-          <div class="impact-card">
-            <div class="impact-inner">
-              <div class="metric-large">
-                <strong>8+</strong>
-                <span>años de trayectoria en el mercado e-learning</span>
-              </div>
-              <div class="metric-row">
-                <div class="metric-small"><strong>40+</strong><span>años de respaldo estratégico en formación</span></div>
-                <div class="metric-small"><strong>4.000+</strong><span>contenidos e-learning disponibles</span></div>
-              </div>
-              <div class="metric-large" style="padding:22px">
-                <span>Campus virtual personalizado, LMS propio, escuelas formativas y contenidos listos para instalar o implementar.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-soft" id="quienes-somos">
-      <div class="container">
-        <div class="section-heading">
-          <h2>¿Quiénes somos?</h2>
-          <div class="underline"></div>
-          <p class="section-copy">Somos un aliado para transformar procesos formativos en experiencias digitales claras, útiles y medibles.</p>
-        </div>
-
-        <div class="intro-grid">
-          <article class="content-card">
-            <p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#propuesta">Conocer propuesta de valor →</a>
+<a class="btn btn-outline" href="#apoyamos">Ver a quiénes apoyamos</a>
+</div>
+</div>
+<div aria-label="Resumen de experiencia de Vértice Formación Profesional" class="hero-panel">
+<div class="impact-card">
+<div class="impact-inner">
+<div class="metric-large">
+<strong>8+</strong>
+<span>años de trayectoria en el mercado e-learning</span>
+</div>
+<div class="metric-row">
+<div class="metric-small"><strong>40+</strong><span>años de respaldo estratégico en formación</span></div>
+<div class="metric-small"><strong>4.000+</strong><span>contenidos e-learning disponibles</span></div>
+</div>
+<div class="metric-large" style="padding:22px">
+<span>Campus virtual personalizado, LMS propio, escuelas formativas y contenidos listos para instalar o implementar.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section-soft" id="quienes-somos">
+<div class="container">
+<div class="section-heading">
+<h2>¿Quiénes somos?</h2>
+<div class="underline"></div>
+<p class="section-copy">Somos un aliado para transformar procesos formativos en experiencias digitales claras, útiles y medibles.</p>
+</div>
+<div class="intro-grid">
+<article class="content-card">
+<p>
               Vértice Formación Profesional es una empresa especializada en el diseño, desarrollo e implementación de soluciones
               de formación online, con una trayectoria de más de 8 años en el mercado y el respaldo estratégico de Vértice Formación
               y Empleo de España, organización con más de 40 años de experiencia en el sector de la formación.
             </p>
-            <p>
+<p>
               Somos especialistas en e-learning, tecnología educativa, diseño instruccional, digitalización de contenidos y soluciones
               formativas personalizadas para instituciones educativas, empresas, gremios, asociaciones y entidades públicas.
             </p>
-            <p>
+<p>
               Contamos con sistemas propios de gestión del aprendizaje —LMS—, escuelas formativas, campus virtual personalizado con la imagen
               del cliente y un catálogo de más de 4.000 contenidos e-learning disponibles para instalar o implementar en diferentes plataformas.
             </p>
-          </article>
-
-          <div class="highlight-list">
-            <article class="highlight-item">
-              <div class="icon-box"><img src="assets/icons/icon-elearning.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div>
-              <div><h3>E-learning especializado</h3><p>Soluciones formativas diseñadas para diferentes contextos educativos y empresariales.</p></div>
-            </article>
-            <article class="highlight-item">
-              <div class="icon-box"><img src="assets/icons/icon-lms.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div>
-              <div><h3>LMS y campus virtual</h3><p>Implementación de plataformas propias, campus personalizados y entornos de aprendizaje escalables.</p></div>
-            </article>
-            <article class="highlight-item">
-              <div class="icon-box"><img src="assets/icons/icon-contenidos.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div>
-              <div><h3>Contenido digital</h3><p>Diseño instruccional, digitalización, multimedia, interactividad y conversión a SCORM.</p></div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="proposito">
-      <div class="container">
-        <div class="purpose-grid">
-          <article class="purpose-card featured">
-            <div class="icon-box"><img src="assets/icons/icon-proposito.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div>
-            <h3>Propósito</h3>
-            <p>Brindar soluciones de formación online innovadoras, accesibles y de alto impacto, que contribuyan al desarrollo de capacidades en personas, instituciones y empresas.</p>
-          </article>
-
-          <article class="purpose-card">
-            <div class="icon-box"><img src="assets/icons/icon-mision.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div>
-            <h3>Misión</h3>
-            <p>Acercar la formación online a instituciones educativas, empresas, gremios y entidades públicas, ofreciendo soluciones integrales para diseñar, implementar y gestionar procesos formativos virtuales con calidad, eficiencia y respaldo experto.</p>
-          </article>
-
-          <article class="purpose-card">
-            <div class="icon-box"><img src="assets/icons/icon-vision.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div>
-            <h3>Visión</h3>
-            <p>Consolidarnos como un proveedor de referencia en soluciones e-learning para Colombia, Ecuador y la región, manteniéndonos a la vanguardia de la innovación educativa y la tecnología aplicada a la formación.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-soft" id="propuesta">
-      <div class="container value-panel">
-        <div class="section-heading" style="margin-bottom:0">
-          <h2>Nuestra propuesta de valor</h2>
-          <div class="underline"></div>
-          <p class="section-copy">
+</article>
+<div class="highlight-list">
+<article class="highlight-item">
+<div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-elearning.png"/></div>
+<div><h3>E-learning especializado</h3><p>Soluciones formativas diseñadas para diferentes contextos educativos y empresariales.</p></div>
+</article>
+<article class="highlight-item">
+<div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-lms.png"/></div>
+<div><h3>LMS y campus virtual</h3><p>Implementación de plataformas propias, campus personalizados y entornos de aprendizaje escalables.</p></div>
+</article>
+<article class="highlight-item">
+<div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-contenidos.png"/></div>
+<div><h3>Contenido digital</h3><p>Diseño instruccional, digitalización, multimedia, interactividad y conversión a SCORM.</p></div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section id="proposito">
+<div class="container">
+<div class="purpose-grid">
+<article class="purpose-card featured">
+<div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-proposito.png"/></div>
+<h3>Propósito</h3>
+<p>Brindar soluciones de formación online innovadoras, accesibles y de alto impacto, que contribuyan al desarrollo de capacidades en personas, instituciones y empresas.</p>
+</article>
+<article class="purpose-card">
+<div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-mision.png"/></div>
+<h3>Misión</h3>
+<p>Acercar la formación online a instituciones educativas, empresas, gremios y entidades públicas, ofreciendo soluciones integrales para diseñar, implementar y gestionar procesos formativos virtuales con calidad, eficiencia y respaldo experto.</p>
+</article>
+<article class="purpose-card">
+<div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-vision.png"/></div>
+<h3>Visión</h3>
+<p>Consolidarnos como un proveedor de referencia en soluciones e-learning para Colombia, Ecuador y la región, manteniéndonos a la vanguardia de la innovación educativa y la tecnología aplicada a la formación.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section-soft" id="propuesta">
+<div class="container value-panel">
+<div class="section-heading" style="margin-bottom:0">
+<h2>Nuestra propuesta de valor</h2>
+<div class="underline"></div>
+<p class="section-copy">
             Desarrollamos soluciones formativas que combinan tecnología, contenido, metodología y acompañamiento especializado.
             El objetivo es que la formación online sea una experiencia clara, útil, atractiva y alineada con los objetivos estratégicos de cada organización.
           </p>
-        </div>
-
-        <div class="value-grid">
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-diseno-contenidos.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Diseño de contenidos</h3><p>Desarrollo de contenidos formativos desde cero, alineados con objetivos de aprendizaje.</p></article>
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-digitalizacion.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Digitalización</h3><p>Transformación de materiales existentes en recursos digitales estructurados.</p></article>
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-scorm.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>SCORM</h3><p>Conversión de materiales a formato SCORM para integración en plataformas LMS.</p></article>
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-campus.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Campus virtual</h3><p>Implementación de campus personalizado con imagen y necesidades del cliente.</p></article>
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-integraciones.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Integraciones LMS</h3><p>Integración de contenidos en plataformas propias o de terceros.</p></article>
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-multimedia.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Multimedia interactiva</h3><p>Desarrollo de recursos multimedia, actividades y experiencias interactivas.</p></article>
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-corporativo.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Formación corporativa</h3><p>Programas a la medida para fortalecer capacidades y objetivos de negocio.</p></article>
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-whatsapp.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Microcápsulas WhatsApp</h3><p>Programas cortos de aprendizaje mediante microcontenidos en canales de alta adopción.</p></article>
-          <article class="value-item"><div class="icon-box"><img src="assets/icons/icon-consultoria.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Consultoría</h3><p>Acompañamiento especializado para instituciones educativas y empresas.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="apoyamos">
-      <div class="container">
-        <div class="section-heading">
-          <h2>¿A quiénes apoyamos?</h2>
-          <div class="underline"></div>
-          <p class="section-copy">Nuestros contenidos, soluciones y servicios están dirigidos a diferentes tipos de organizaciones y públicos.</p>
-        </div>
-
-        <div class="audience-grid">
-          <article class="audience-card"><div class="icon-box"><img src="assets/icons/icon-universidad.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Educación superior</h3><p>Universidades e instituciones de educación superior.</p></article>
-          <article class="audience-card"><div class="icon-box"><img src="assets/icons/icon-formacion-trabajo.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Formación para el trabajo</h3><p>Instituciones de educación para el trabajo y desarrollo humano.</p></article>
-          <article class="audience-card"><div class="icon-box"><img src="assets/icons/icon-escuela-tecnica.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Escuelas técnicas</h3><p>Centros de formación profesional, escuelas técnicas y escuelas de negocios.</p></article>
-          <article class="audience-card"><div class="icon-box"><img src="assets/icons/icon-colegios.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Colegios</h3><p>Colegios y asociaciones de instituciones educativas.</p></article>
-          <article class="audience-card"><div class="icon-box"><img src="assets/icons/icon-gremios.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Gremios</h3><p>Cámaras de comercio, gremios y asociaciones empresariales.</p></article>
-          <article class="audience-card"><div class="icon-box"><img src="assets/icons/icon-empresas.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Empresas</h3><p>Empresas de diferentes sectores económicos.</p></article>
-          <article class="audience-card"><div class="icon-box"><img src="assets/icons/icon-profesionales.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Profesionales</h3><p>Profesionales independientes que requieren soluciones formativas.</p></article>
-          <article class="audience-card"><div class="icon-box"><img src="assets/icons/icon-entidades-publicas.png" alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div><h3>Entidades públicas</h3><p>Organizaciones que desarrollan procesos de capacitación y fortalecimiento institucional.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-soft">
-      <div class="container">
-        <div class="sectors-panel">
-          <div class="sectors-content">
-            <h2>Presencia en Colombia y Ecuador</h2>
-            <p>
+</div>
+<div class="value-grid">
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-diseno-contenidos.png"/></div><h3>Diseño de contenidos</h3><p>Desarrollo de contenidos formativos desde cero, alineados con objetivos de aprendizaje.</p></article>
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-digitalizacion.png"/></div><h3>Digitalización</h3><p>Transformación de materiales existentes en recursos digitales estructurados.</p></article>
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-scorm.png"/></div><h3>SCORM</h3><p>Conversión de materiales a formato SCORM para integración en plataformas LMS.</p></article>
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-campus.png"/></div><h3>Campus virtual</h3><p>Implementación de campus personalizado con imagen y necesidades del cliente.</p></article>
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-integraciones.png"/></div><h3>Integraciones LMS</h3><p>Integración de contenidos en plataformas propias o de terceros.</p></article>
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-multimedia.png"/></div><h3>Multimedia interactiva</h3><p>Desarrollo de recursos multimedia, actividades y experiencias interactivas.</p></article>
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-corporativo.png"/></div><h3>Formación corporativa</h3><p>Programas a la medida para fortalecer capacidades y objetivos de negocio.</p></article>
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-whatsapp.png"/></div><h3>Microcápsulas WhatsApp</h3><p>Programas cortos de aprendizaje mediante microcontenidos en canales de alta adopción.</p></article>
+<article class="value-item"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-consultoria.png"/></div><h3>Consultoría</h3><p>Acompañamiento especializado para instituciones educativas y empresas.</p></article>
+</div>
+</div>
+</section>
+<section id="apoyamos">
+<div class="container">
+<div class="section-heading">
+<h2>¿A quiénes apoyamos?</h2>
+<div class="underline"></div>
+<p class="section-copy">Nuestros contenidos, soluciones y servicios están dirigidos a diferentes tipos de organizaciones y públicos.</p>
+</div>
+<div class="audience-grid">
+<article class="audience-card"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-universidad.png"/></div><h3>Educación superior</h3><p>Universidades e instituciones de educación superior.</p></article>
+<article class="audience-card"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-formacion-trabajo.png"/></div><h3>Formación para el trabajo</h3><p>Instituciones de educación para el trabajo y desarrollo humano.</p></article>
+<article class="audience-card"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-escuela-tecnica.png"/></div><h3>Escuelas técnicas</h3><p>Centros de formación profesional, escuelas técnicas y escuelas de negocios.</p></article>
+<article class="audience-card"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-colegios.png"/></div><h3>Colegios</h3><p>Colegios y asociaciones de instituciones educativas.</p></article>
+<article class="audience-card"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-gremios.png"/></div><h3>Gremios</h3><p>Cámaras de comercio, gremios y asociaciones empresariales.</p></article>
+<article class="audience-card"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-empresas.png"/></div><h3>Empresas</h3><p>Empresas de diferentes sectores económicos.</p></article>
+<article class="audience-card"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-profesionales.png"/></div><h3>Profesionales</h3><p>Profesionales independientes que requieren soluciones formativas.</p></article>
+<article class="audience-card"><div class="icon-box"><img alt="" class="icon-img" onerror="this.parentElement.classList.add('is-empty'); this.remove();" src="assets/icons/icon-entidades-publicas.png"/></div><h3>Entidades públicas</h3><p>Organizaciones que desarrollan procesos de capacitación y fortalecimiento institucional.</p></article>
+</div>
+</div>
+</section>
+<section class="section-soft">
+<div class="container">
+<div class="sectors-panel">
+<div class="sectors-content">
+<h2>Presencia en Colombia y Ecuador</h2>
+<p>
               Actualmente, nuestros principales clientes se encuentran en Colombia y Ecuador, especialmente en sectores como educación superior,
               automotor, transporte, construcción, infraestructura, formación empresarial y desarrollo institucional.
             </p>
-          </div>
-          <div class="sector-tags" aria-label="Sectores atendidos">
-            <span class="sector-tag">Educación superior</span>
-            <span class="sector-tag">Automotor</span>
-            <span class="sector-tag">Transporte</span>
-            <span class="sector-tag">Construcción</span>
-            <span class="sector-tag">Infraestructura</span>
-            <span class="sector-tag">Formación empresarial</span>
-            <span class="sector-tag">Desarrollo institucional</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section" id="contacto">
-      <div class="container">
-        <div class="cta-banner">
-          <div class="cta-content">
-            <h2>Conversemos sobre tu proyecto de formación</h2>
-            <p>Diseñamos soluciones e-learning alineadas con tus objetivos, tus públicos y tus plataformas actuales.</p>
-          </div>
-          <a class="btn" href="mailto:info@verticeformacion.com">Hablar con un asesor →</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a href="index.html#inicio" class="brand" aria-label="Vértice Formación Profesional">
-            <img src="assets/logo-vertice.png" alt="Vértice Formación Profesional" class="brand-logo" />
-          </a>
-          <p>Creamos experiencias de aprendizaje digital que conectan con las personas y generan resultados.</p>
-          <div class="socials" aria-label="Redes sociales">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Instagram">ig</a>
-            <a href="#" aria-label="YouTube">▶</a>
-          </div>
-        </div>
-
-        <div>
-          <h4>Enlaces rápidos</h4>
-          <div class="footer-links">
-            <a href="index.html#inicio">Inicio</a>
-            <a href="index.html#servicios">Servicios</a>
-            <a href="index.html#soluciones">Soluciones</a>
-            <a href="index.html#tecnologias">Tecnologías</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="index.html#contacto">Contacto</a>
-          </div>
-        </div>
-
-        <div>
-          <h4>Servicios</h4>
-          <div class="footer-links">
-            <a href="index.html#servicios">Plataforma LMS</a>
-            <a href="index.html#servicios">Creación y digitalización de contenidos</a>
-            <a href="index.html#servicios">Cursos en WhatsApp</a>
-            <a href="index.html#servicios">LMS flexible</a>
-            <a href="index.html#servicios">SCORM y xAPI</a>
-          </div>
-        </div>
-
-        <div>
-          <h4>Contacto</h4>
-          <div class="contact-item"><span>☎</span><span>+57 310 123 4567</span></div>
-          <div class="contact-item"><span>✉</span><span>info@verticeformacion.com</span></div>
-          <div class="contact-item"><span>⌖</span><span>Bogotá, Colombia</span></div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
-        <div>
-          <a href="#">Política de privacidad</a>
-          <a href="#">Términos y condiciones</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+</div>
+<div aria-label="Sectores atendidos" class="sector-tags">
+<span class="sector-tag">Educación superior</span>
+<span class="sector-tag">Automotor</span>
+<span class="sector-tag">Transporte</span>
+<span class="sector-tag">Construcción</span>
+<span class="sector-tag">Infraestructura</span>
+<span class="sector-tag">Formación empresarial</span>
+<span class="sector-tag">Desarrollo institucional</span>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section" id="contacto">
+<div class="container">
+<div class="cta-banner">
+<div class="cta-content">
+<h2>Conversemos sobre tu proyecto de formación</h2>
+<p>Diseñamos soluciones e-learning alineadas con tus objetivos, tus públicos y tus plataformas actuales.</p>
+</div>
+<a class="btn" href="contacto.html">Hablar con un asesor →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<a aria-label="Vértice Formación Profesional" class="brand" href="index.html#inicio">
+<img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/>
+</a>
+<p>Creamos experiencias de aprendizaje digital que conectan con las personas y generan resultados.</p>
+<div aria-label="Redes sociales" class="socials">
+<a aria-label="LinkedIn" href="#">in</a>
+<a aria-label="Facebook" href="#">f</a>
+<a aria-label="Instagram" href="#">ig</a>
+<a aria-label="YouTube" href="#">▶</a>
+</div>
+</div>
+<div>
+<h4>Enlaces rápidos</h4>
+<div class="footer-links"><a href="index.html">Inicio</a>
+<a href="index.html#servicios">Servicios</a>
+<a href="gamificacion.html">Gamificación</a>
+<a href="index.html#areas">Áreas</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="equipo.html">Equipo</a>
+<a href="contacto.html">Contacto</a>
+</div>
+</div>
+<div>
+<h4>Servicios</h4>
+<div class="footer-links"><a href="servicio-plataforma-lms.html">Plataforma LMS</a>
+<a href="servicio-digitalizacion-contenidos.html">Creación y digitalización de contenidos</a>
+<a href="servicio-cursos-whatsapp.html">Cursos en WhatsApp</a>
+<a href="servicio-lms-flexible.html">LMS flexible</a>
+<a href="servicio-scorm-xapi.html">SCORM y xAPI</a>
+</div>
+</div>
+<div>
+<h4>Contacto</h4>
+<div class="contact-item"><span>☎</span><span>+57 320 301 3190</span></div>
+<div class="contact-item"><span>✉</span><span>boris.mejia@verticeformacionprofesional.com</span></div>
+<div class="contact-item"><span>⌖</span><span>Bogotá, Colombia</span></div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
+<div>
+<a href="#">Política de privacidad</a>
+<a href="#">Términos y condiciones</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
     const nav = document.getElementById('mainNav');
     const toggle = document.querySelector('.mobile-toggle');
 
