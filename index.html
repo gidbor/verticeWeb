@@ -1201,7 +1201,166 @@
     grid-template-columns: 1fr;
   }
 }
-</style>
+
+
+/* Banner descarga catálogo */
+.catalog-download-section {
+  padding: 62px 0;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(91, 198, 232, 0.15), transparent 26rem),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.catalog-download-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr auto;
+  align-items: center;
+  gap: 34px;
+  padding: 42px 46px;
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 86% 12%, rgba(91, 198, 232, 0.26), transparent 18rem),
+    linear-gradient(135deg, #233e66 0%, #1c355e 46%, #e72862 130%);
+  color: #ffffff;
+  box-shadow: 0 24px 70px rgba(28, 53, 94, 0.18);
+}
+
+.catalog-download-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.catalog-download-content,
+.catalog-download-actions,
+.catalog-file-preview {
+  position: relative;
+  z-index: 1;
+}
+
+.catalog-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #5BC6E8;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.catalog-kicker::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 999px;
+  background: #5BC6E8;
+}
+
+.catalog-download-card h2 {
+  max-width: 720px;
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.catalog-download-card p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(255,255,255,0.82);
+  font-size: 1.04rem;
+}
+
+.catalog-download-actions {
+  display: grid;
+  gap: 14px;
+  justify-items: end;
+}
+
+.catalog-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #e72862;
+  font-weight: 900;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.catalog-download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-file-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 245px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(12px);
+}
+
+.catalog-file-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(91, 198, 232, 0.18);
+  color: #5BC6E8;
+  font-weight: 900;
+}
+
+.catalog-file-text strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.catalog-file-text span {
+  display: block;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 860px) {
+  .catalog-download-card {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+
+  .catalog-download-actions {
+    justify-items: start;
+  }
+
+  .catalog-download-button {
+    width: 100%;
+  }
+
+  .catalog-file-preview {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -1212,6 +1371,7 @@
 <div aria-label="Secciones del sitio" class="nav-links"><a class="active" href="index.html">Inicio</a>
 <a href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
+<a href="index.html#catalogo">Catálogo</a>
 <a href="gamificacion.html">Gamificación</a>
 <a href="index.html#areas">Áreas</a>
 <a href="equipo.html">Equipo</a>
@@ -1264,6 +1424,32 @@
 </div>
 </div>
 </section>
+
+
+<section class="catalog-download-section" id="catalogo">
+  <div class="container">
+    <div class="catalog-download-card">
+      <div class="catalog-download-content">
+        <div class="catalog-kicker">Catálogo de contenidos</div>
+        <h2>Descarga nuestro catálogo e-learning</h2>
+        <p>Consulta la oferta de contenidos disponibles para implementar en campus virtuales, plataformas LMS, procesos corporativos y proyectos de formación a la medida.</p>
+      </div>
+      <div class="catalog-download-actions">
+        <a class="catalog-download-button" href="assets/docs/catalogo_vertice_cloud.xlsx" download>
+          Descargar Excel →
+        </a>
+        <div class="catalog-file-preview" aria-label="Archivo de catálogo disponible">
+          <div class="catalog-file-icon">XLS</div>
+          <div class="catalog-file-text">
+            <strong>catalogo_vertice_cloud.xlsx</strong>
+            <span>Archivo Excel editable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section-soft" id="servicios">
 <div class="container">
 <div class="section-heading">
@@ -1433,6 +1619,7 @@
 <div class="footer-links"><a href="index.html">Inicio</a>
 <a href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
+<a href="index.html#catalogo">Catálogo</a>
 <a href="gamificacion.html">Gamificación</a>
 <a href="index.html#areas">Áreas</a>
 <a href="equipo.html">Equipo</a>
