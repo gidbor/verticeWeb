@@ -806,8 +806,156 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Ajustes solicitados: acento cyan, favicon/PNG, bordes animados y proceso visual */
+:root { --cyan: #5BC6E8; --cyan-soft: #e8f8fd; --navy2: #233e66; --rose: #e72862; }
+.nav-links a.active::after,
+.nav-links a:hover::after { background: linear-gradient(90deg, var(--rose), var(--cyan)) !important; }
+.office-card .office-label,
+.office-line span:first-child,
+.contact-item span:first-child { color: var(--cyan) !important; }
+.quick-item span:first-child { color: var(--cyan) !important; background: var(--cyan-soft) !important; }
+.underline { background: linear-gradient(90deg, var(--rose), var(--cyan)) !important; }
+.eyebrow { color: var(--cyan) !important; }
+.eyebrow::before { background: linear-gradient(90deg, var(--rose), var(--cyan)) !important; }
+.btn-outline:hover { border-color: var(--cyan) !important; box-shadow: 0 10px 24px rgba(91, 198, 232, .18) !important; }
+.tech-badge span, .catalog-file-icon { color: var(--navy2) !important; background: var(--cyan-soft) !important; }
+.info-card:hover, .benefit-card:hover, .solution-card:hover, .area-card:hover { border-color: rgba(91, 198, 232, .55) !important; }
+.service-card.card-link {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: var(--line);
+}
+.service-card.card-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(120deg, #233e66, #5BC6E8, #e72862, #5BC6E8, #233e66);
+  background-size: 260% 260%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.service-card.card-link:hover::before,
+.service-card.card-link:focus-visible::before,
+.service-card.card-link:active::before,
+.service-card.card-link.is-selected::before {
+  opacity: 1;
+  animation: serviceBorderMove 3s linear infinite;
+}
+.service-card.card-link:hover,
+.service-card.card-link:focus-visible {
+  transform: translateY(-7px);
+  box-shadow: 0 24px 60px rgba(91, 198, 232, .16), 0 16px 40px rgba(28, 53, 94, .10) !important;
+}
+@keyframes serviceBorderMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 260% 50%; }
+}
+.area-icon-img,
+.icon-img,
+.icon.image-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+}
+.area-card span:has(img), .area-card .area-icon-wrap {
+  width: 62px;
+  height: 62px;
+  padding: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--cyan-soft), var(--magenta-soft));
+}
+.hero-area-icon {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin: 0 0 18px;
+}
+.icon.image-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--cyan-soft), #fff7fb);
+}
+.digitization-flow,
+.gamification-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  counter-reset: flowstep;
+}
+.flow-card {
+  position: relative;
+  min-height: 280px;
+  padding: 26px 22px;
+  border-radius: var(--radius-lg, 24px);
+  background: #ffffff;
+  border: 1px solid var(--line, #e7edf5);
+  box-shadow: var(--shadow-soft, 0 12px 35px rgba(28,53,94,.08));
+  overflow: hidden;
+}
+.flow-card::before {
+  counter-increment: flowstep;
+  content: "0" counter(flowstep);
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: rgba(91,198,232,.28);
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.flow-card img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+.flow-card h3 {
+  color: var(--navy, #1c355e);
+  margin-bottom: 10px;
+}
+.flow-card p {
+  color: var(--muted, #5f6f89);
+  margin: 0;
+  font-size: .95rem;
+}
+.process-note {
+  margin-top: 26px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--cyan-soft), #fff7fb);
+  color: var(--navy2);
+  font-weight: 800;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  .digitization-flow,
+  .gamification-flow { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .digitization-flow,
+  .gamification-flow { grid-template-columns: 1fr; }
+  .flow-card { min-height: auto; }
+}
+
 </style>
-</head>
+<link href="assets/favicon.png" rel="icon" type="image/png"/></head>
 <body>
 <header class="site-header">
 <nav aria-label="Navegación principal" class="container nav" id="mainNav"><a aria-label="Vértice Formación Profesional" class="brand" href="index.html"><img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/></a>
