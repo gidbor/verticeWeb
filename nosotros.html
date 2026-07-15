@@ -1042,6 +1042,104 @@
   .flow-card { min-height: auto; }
 }
 
+
+/* Ajustes julio 2026: menú, CTA cyan, catálogo y slider de áreas */
+.btn-primary, .header-cta {
+  background: #5BC6E8 !important;
+  color: #133455 !important;
+  box-shadow: 0 16px 34px rgba(91,198,232,.28) !important;
+}
+.btn-primary:hover, .header-cta:hover {
+  background: #48b7dc !important;
+  color: #133455 !important;
+  box-shadow: 0 22px 44px rgba(91,198,232,.32) !important;
+}
+.footer-links a:hover,
+.nav-links a:hover { color: #233e66; }
+.catalog-download-button {
+  background: linear-gradient(135deg, #5BC6E8, #7bd4ef) !important;
+  color: #123553 !important;
+}
+.area-slider-section { padding: 86px 0; background: linear-gradient(180deg, #fff 0%, #f7fbfe 100%); }
+.area-slider-wrap { position: relative; }
+.area-slider-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(300px, 34%);
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 6px 4px 18px;
+  scrollbar-width: none;
+}
+.area-slider-track::-webkit-scrollbar { display: none; }
+.area-slide {
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid rgba(35,62,102,.08);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(35,62,102,.10);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.area-slide:hover { transform: translateY(-4px); box-shadow: 0 26px 50px rgba(35,62,102,.14); }
+.area-slide-media { aspect-ratio: 16 / 10; overflow: hidden; background: #eef7fb; }
+.area-slide-media img { width: 100%; height: 100%; object-fit: cover; }
+.area-slide-content { padding: 22px 22px 24px; }
+.area-slide-content h3 { margin: 0 0 10px; font-size: 1.28rem; color: #1c355e; }
+.area-slide-content p { margin: 0 0 16px; color: #5f6f89; min-height: 72px; }
+.area-slide-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 800; color: #233e66;
+}
+.area-slide-link::after { content: '→'; color: #5BC6E8; font-size: 1.1em; }
+.area-slider-controls {
+  display: flex; justify-content: flex-end; gap: 12px; margin-top: 18px;
+}
+.area-slider-btn {
+  width: 48px; height: 48px; border-radius: 999px; border: 1px solid rgba(35,62,102,.14);
+  background: #fff; color: #233e66; font-size: 1.4rem; cursor: pointer;
+  box-shadow: 0 12px 28px rgba(35,62,102,.08); transition: all .2s ease;
+}
+.area-slider-btn:hover { background: #5BC6E8; color: #123553; transform: translateY(-2px); }
+.service-card.service-highlight { position: relative; }
+.service-card.service-highlight::before {
+  content: ""; position: absolute; inset: 0; padding: 1.5px; border-radius: inherit;
+  background: linear-gradient(120deg, #233e66, #5BC6E8, #e72862, #5BC6E8, #233e66);
+  background-size: 200% 200%; animation: flowborder 5s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+  opacity: .9;
+}
+@keyframes flowborder {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@media (max-width: 980px) {
+  .area-slider-track { grid-auto-columns: minmax(280px, 60%); }
+}
+@media (max-width: 680px) {
+  .area-slider-track { grid-auto-columns: 86%; }
+  .area-slide-content p { min-height: auto; }
+}
+
+
+/* Ajuste CTA: botón Solicita información con degradado cyan-magenta */
+.btn-primary,
+.header-cta {
+  background: linear-gradient(90deg, #5BC6E8 0%, #e72862 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 36px rgba(231, 40, 98, 0.18), 0 14px 30px rgba(91, 198, 232, 0.18) !important;
+}
+.btn-primary:hover,
+.header-cta:hover {
+  background: linear-gradient(90deg, #46bde3 0%, #d91f58 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 22px 44px rgba(231, 40, 98, 0.24), 0 16px 34px rgba(91, 198, 232, 0.22) !important;
+}
+
 </style>
 <link href="assets/favicon.png" rel="icon" type="image/png"/></head>
 <body>
@@ -1053,7 +1151,7 @@
 <div aria-label="Secciones del sitio" class="nav-links"><a href="index.html">Inicio</a>
 <a class="active" href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
-<a href="gamificacion.html">Gamificación</a>
+<a href="index.html#catalogo">Catálogo</a>
 <a href="index.html#areas">Áreas</a>
 <a href="equipo.html">Equipo</a>
 <a href="contacto.html">Contacto</a>

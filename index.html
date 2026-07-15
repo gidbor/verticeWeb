@@ -1508,6 +1508,264 @@
   .flow-card { min-height: auto; }
 }
 
+
+/* Ajustes julio 2026: menú, CTA cyan, catálogo y slider de áreas */
+.btn-primary, .header-cta {
+  background: #5BC6E8 !important;
+  color: #133455 !important;
+  box-shadow: 0 16px 34px rgba(91,198,232,.28) !important;
+}
+.btn-primary:hover, .header-cta:hover {
+  background: #48b7dc !important;
+  color: #133455 !important;
+  box-shadow: 0 22px 44px rgba(91,198,232,.32) !important;
+}
+.footer-links a:hover,
+.nav-links a:hover { color: #233e66; }
+.catalog-download-button {
+  background: linear-gradient(135deg, #5BC6E8, #7bd4ef) !important;
+  color: #123553 !important;
+}
+.area-slider-section { padding: 86px 0; background: linear-gradient(180deg, #fff 0%, #f7fbfe 100%); }
+.area-slider-wrap { position: relative; }
+.area-slider-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(300px, 34%);
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 6px 4px 18px;
+  scrollbar-width: none;
+}
+.area-slider-track::-webkit-scrollbar { display: none; }
+.area-slide {
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid rgba(35,62,102,.08);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(35,62,102,.10);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.area-slide:hover { transform: translateY(-4px); box-shadow: 0 26px 50px rgba(35,62,102,.14); }
+.area-slide-media { aspect-ratio: 16 / 10; overflow: hidden; background: #eef7fb; }
+.area-slide-media img { width: 100%; height: 100%; object-fit: cover; }
+.area-slide-content { padding: 22px 22px 24px; }
+.area-slide-content h3 { margin: 0 0 10px; font-size: 1.28rem; color: #1c355e; }
+.area-slide-content p { margin: 0 0 16px; color: #5f6f89; min-height: 72px; }
+.area-slide-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 800; color: #233e66;
+}
+.area-slide-link::after { content: '→'; color: #5BC6E8; font-size: 1.1em; }
+.area-slider-controls {
+  display: flex; justify-content: flex-end; gap: 12px; margin-top: 18px;
+}
+.area-slider-btn {
+  width: 48px; height: 48px; border-radius: 999px; border: 1px solid rgba(35,62,102,.14);
+  background: #fff; color: #233e66; font-size: 1.4rem; cursor: pointer;
+  box-shadow: 0 12px 28px rgba(35,62,102,.08); transition: all .2s ease;
+}
+.area-slider-btn:hover { background: #5BC6E8; color: #123553; transform: translateY(-2px); }
+.service-card.service-highlight { position: relative; }
+.service-card.service-highlight::before {
+  content: ""; position: absolute; inset: 0; padding: 1.5px; border-radius: inherit;
+  background: linear-gradient(120deg, #233e66, #5BC6E8, #e72862, #5BC6E8, #233e66);
+  background-size: 200% 200%; animation: flowborder 5s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+  opacity: .9;
+}
+@keyframes flowborder {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@media (max-width: 980px) {
+  .area-slider-track { grid-auto-columns: minmax(280px, 60%); }
+}
+@media (max-width: 680px) {
+  .area-slider-track { grid-auto-columns: 86%; }
+  .area-slide-content p { min-height: auto; }
+}
+
+
+/* Slider full-width one area per view + autoplay */
+.area-slider-section {
+  padding: 90px 0;
+  background: linear-gradient(180deg, #fff 0%, #f7fbfe 100%);
+}
+.area-slider-wrap {
+  position: relative;
+  margin-top: 22px;
+}
+.area-slider-track {
+  display: grid !important;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0;
+  scrollbar-width: none;
+}
+.area-slider-track::-webkit-scrollbar { display: none; }
+.area-slide {
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+  min-height: 460px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(35, 62, 102, 0.08);
+  box-shadow: 0 26px 60px rgba(35, 62, 102, 0.12);
+}
+.area-slide-media {
+  height: 100%;
+  min-height: 460px;
+  aspect-ratio: auto;
+  overflow: hidden;
+  background: #eef7fb;
+}
+.area-slide-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.area-slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 42px 42px 46px;
+  background: linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(248,251,254,.98) 100%);
+}
+.area-slide-content h3 {
+  margin: 0 0 14px;
+  font-size: clamp(1.75rem, 2vw, 2.25rem);
+  line-height: 1.05;
+  color: #1c355e;
+}
+.area-slide-content p {
+  margin: 0 0 22px;
+  color: #5f6f89;
+  min-height: 0;
+  max-width: 42ch;
+  font-size: 1.02rem;
+}
+.area-slide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 14px;
+  background: #5BC6E8;
+  color: #123553;
+  font-weight: 800;
+  box-shadow: 0 14px 28px rgba(91,198,232,.24);
+}
+.area-slide-link::after { content: '→'; color: inherit; }
+.area-slider-controls {
+  position: absolute;
+  right: 26px;
+  bottom: 26px;
+  z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 0;
+}
+.area-slider-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid rgba(35,62,102,.12);
+  background: rgba(255,255,255,.92);
+  color: #233e66;
+  font-size: 1.45rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px rgba(35,62,102,.10);
+  transition: all .2s ease;
+}
+.area-slider-btn:hover {
+  background: #5BC6E8;
+  color: #123553;
+  transform: translateY(-2px);
+}
+.area-slider-progress {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+}
+.area-slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(35,62,102,.18);
+  cursor: pointer;
+  transition: all .2s ease;
+  padding: 0;
+}
+.area-slider-dot.is-active {
+  width: 34px;
+  background: linear-gradient(90deg, #233e66, #5BC6E8);
+}
+@media (max-width: 980px) {
+  .area-slide {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .area-slide-media { min-height: 280px; }
+  .area-slide-content { padding: 28px 26px 34px; }
+  .area-slider-controls {
+    right: 18px;
+    bottom: auto;
+    top: 18px;
+  }
+}
+@media (max-width: 640px) {
+  .area-slider-section { padding: 72px 0; }
+  .area-slide { border-radius: 24px; }
+  .area-slide-media { min-height: 220px; }
+  .area-slide-content h3 { font-size: 1.6rem; }
+  .area-slider-btn { width: 44px; height: 44px; }
+}
+
+
+/* Ajuste CTA: botón Solicita información con degradado cyan-magenta */
+.btn-primary,
+.header-cta {
+  background: linear-gradient(90deg, #5BC6E8 0%, #e72862 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 36px rgba(231, 40, 98, 0.18), 0 14px 30px rgba(91, 198, 232, 0.18) !important;
+}
+.btn-primary:hover,
+.header-cta:hover {
+  background: linear-gradient(90deg, #46bde3 0%, #d91f58 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 22px 44px rgba(231, 40, 98, 0.24), 0 16px 34px rgba(91, 198, 232, 0.22) !important;
+}
+
+
+/* Centrar tarjeta de Gamificación dentro de servicios */
+@media (min-width: 1101px) {
+  .services-grid > .service-card[href="gamificacion.html"] { grid-column: 3 / 4; }
+}
+@media (min-width: 861px) and (max-width: 1100px) {
+  .services-grid > .service-card[href="gamificacion.html"] { grid-column: 2 / 3; }
+}
+@media (max-width: 860px) {
+  .services-grid > .service-card[href="gamificacion.html"] { grid-column: auto; }
+}
+
 </style>
 <link href="assets/favicon.png" rel="icon" type="image/png"/></head>
 <body>
@@ -1519,7 +1777,6 @@
 <div aria-label="Secciones del sitio" class="nav-links"><a class="active" href="index.html">Inicio</a>
 <a href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
-
 <a href="index.html#catalogo">Catálogo</a>
 <a href="index.html#areas">Áreas</a>
 <a href="equipo.html">Equipo</a>
@@ -1603,56 +1860,61 @@
 <p class="section-copy">Soluciones claras para implementar, actualizar y escalar experiencias de aprendizaje digital.</p>
 </div>
 <div class="services-grid">
-<a class="service-card card-link" href="servicio-plataforma-lms.html">
+<a class="service-card card-link service-highlight" href="servicio-plataforma-lms.html">
 <div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-plataforma-lms.png"/></div>
 <h3>Plataforma LMS</h3>
 <p>Implementamos una plataforma LMS para centralizar cursos, usuarios, rutas, evidencias, certificados y reportes.</p>
 </a>
-<a class="service-card card-link" href="servicio-digitalizacion-contenidos.html">
+<a class="service-card card-link service-highlight" href="servicio-digitalizacion-contenidos.html">
 <div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-digitalizacion-contenidos.png"/></div>
 <h3>Creación y digitalización de contenidos</h3>
 <p>Convertimos documentos, presentaciones, manuales y procesos internos en experiencias formativas digitales.</p>
 </a>
-<a class="service-card card-link" href="servicio-cursos-whatsapp.html">
+<a class="service-card card-link service-highlight" href="servicio-cursos-whatsapp.html">
 <div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-cursos-whatsapp.png"/></div>
 <h3>Cursos en WhatsApp</h3>
 <p>Diseñamos microcápsulas y experiencias de aprendizaje distribuidas por WhatsApp para ampliar alcance y participación.</p>
 </a>
-<a class="service-card card-link" href="servicio-lms-flexible.html">
+<a class="service-card card-link service-highlight" href="servicio-lms-flexible.html">
 <div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-lms-flexible.png"/></div>
 <h3>LMS flexible</h3>
 <p>Adaptamos la plataforma a diferentes modelos de formación: académico, corporativo, gremial o institucional.</p>
 </a>
-<a class="service-card card-link" href="servicio-scorm-xapi.html">
+<a class="service-card card-link service-highlight" href="servicio-scorm-xapi.html">
 <div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-scorm-xapi.png"/></div>
 <h3>SCORM y xAPI</h3>
 <p>Convertimos y empaquetamos contenidos para facilitar su instalación y seguimiento en plataformas LMS.</p>
 </a>
+<a class="service-card card-link service-highlight" href="gamificacion.html">
+<div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-aprendizaje-alto-impacto.png"/></div>
+<h3>Gamificación</h3>
+<p>Integramos insignias, retos, puntos, niveles y dinámicas de avance para motivar la participación y la permanencia.</p>
+</a>
 </div>
 </div>
 </section>
-<section class="areas-section" id="areas">
+<section class="area-slider-section" id="areas">
 <div class="container">
 <div class="section-heading">
 <h2>Áreas especializadas</h2>
 <div class="underline"></div>
-<p class="section-copy">Creamos digitalizaciones, recursos y rutas e-learning para sectores con necesidades técnicas y operativas específicas.</p>
+<p class="section-copy">Explora contextos de formación donde desarrollamos contenidos digitales, rutas e-learning y experiencias prácticas de aprendizaje.</p>
 </div>
-<div class="areas-grid">
-<a class="area-card card-link" href="area-automotriz.html"><span aria-hidden="true" class="area-icon-wrap"><img alt="" aria-hidden="true" class="area-icon-img" src="assets/icons/area-automotriz.png"/></span><h3>Automotriz</h3></a><a class="area-card card-link" href="area-sostenibilidad.html"><span aria-hidden="true" class="area-icon-wrap"><img alt="" aria-hidden="true" class="area-icon-img" src="assets/icons/area-sostenibilidad.png"/></span><h3>Sostenibilidad</h3></a><a class="area-card card-link" href="area-climatizacion-refrigeracion.html"><span aria-hidden="true" class="area-icon-wrap"><img alt="" aria-hidden="true" class="area-icon-img" src="assets/icons/area-climatizacion-refrigeracion.png"/></span><h3>Climatización y refrigeración</h3></a><a class="area-card card-link" href="area-logistica.html"><span aria-hidden="true" class="area-icon-wrap"><img alt="" aria-hidden="true" class="area-icon-img" src="assets/icons/area-logistica.png"/></span><h3>Logística</h3></a><a class="area-card card-link" href="area-ciberseguridad.html"><span aria-hidden="true" class="area-icon-wrap"><img alt="" aria-hidden="true" class="area-icon-img" src="assets/icons/area-ciberseguridad.png"/></span><h3>Ciberseguridad</h3></a><a class="area-card card-link" href="area-formacion-profesional.html"><span aria-hidden="true" class="area-icon-wrap"><img alt="" aria-hidden="true" class="area-icon-img" src="assets/icons/area-formacion-profesional.png"/></span><h3>Formación Profesional</h3></a>
+<div class="area-slider-wrap" data-slider>
+<div class="area-slider-track">
+<article class="area-slide"><div class="area-slide-media"><img src="assets/areas/automotriz.png" alt="Proceso formativo en el área automotriz"/></div><div class="area-slide-content"><h3>Automotriz</h3><p>Digitalizamos conocimiento técnico, protocolos de servicio, diagnósticos, seguridad y procesos de taller para marcas, concesionarios y equipos posventa.</p><a class="area-slide-link" href="area-automotriz.html">Conocer el área</a></div></article>
+<article class="area-slide"><div class="area-slide-media"><img src="assets/areas/sostenibilidad.png" alt="Proceso formativo en sostenibilidad"/></div><div class="area-slide-content"><h3>Sostenibilidad</h3><p>Convertimos contenidos ambientales, ESG, economía circular y cultura sostenible en experiencias claras, accionables y medibles.</p><a class="area-slide-link" href="area-sostenibilidad.html">Conocer el área</a></div></article>
+<article class="area-slide"><div class="area-slide-media"><img src="assets/areas/climatizacion-refrigeracion.png" alt="Proceso formativo en climatización y refrigeración"/></div><div class="area-slide-content"><h3>Climatización y refrigeración</h3><p>Desarrollamos recursos sobre instalación, mantenimiento, diagnóstico, seguridad y operación de sistemas HVAC y refrigeración.</p><a class="area-slide-link" href="area-climatizacion-refrigeracion.html">Conocer el área</a></div></article>
+<article class="area-slide"><div class="area-slide-media"><img src="assets/areas/logistica.png" alt="Proceso formativo en logística"/></div><div class="area-slide-content"><h3>Logística</h3><p>Diseñamos formación digital para inventarios, almacenamiento, transporte, trazabilidad, alistamiento y servicio operacional.</p><a class="area-slide-link" href="area-logistica.html">Conocer el área</a></div></article>
+<article class="area-slide"><div class="area-slide-media"><img src="assets/areas/ciberseguridad.png" alt="Proceso formativo en ciberseguridad"/></div><div class="area-slide-content"><h3>Ciberseguridad</h3><p>Transformamos marcos de seguridad, cultura digital, respuesta a incidentes y buenas prácticas en rutas de aprendizaje aplicadas.</p><a class="area-slide-link" href="area-ciberseguridad.html">Conocer el área</a></div></article>
+<article class="area-slide"><div class="area-slide-media"><img src="assets/areas/formacion-profesional.png" alt="Proceso formativo en formación profesional"/></div><div class="area-slide-content"><h3>Formación Profesional</h3><p>Impulsamos contenidos técnicos, prácticos y pedagógicos para instituciones, centros de formación y programas de desarrollo laboral.</p><a class="area-slide-link" href="area-formacion-profesional.html">Conocer el área</a></div></article>
+</div>
+<div class="area-slider-controls"><button class="area-slider-btn" type="button" aria-label="Ver áreas anteriores" data-prev>‹</button><button class="area-slider-btn" type="button" aria-label="Ver más áreas" data-next>›</button></div>
+<div class="area-slider-progress" aria-label="Indicadores del slider"></div>
 </div>
 </div>
 </section>
-<section class="section-soft" id="gamificacion-home">
-<div class="container tech-panel">
-<div class="section-heading">
-<h2 class="gradient-title">Gamificación para aumentar participación</h2>
-<div class="underline"></div>
-<p class="section-copy">Integramos insignias, medallas, puntos, rachas, misiones y retos para motivar el avance de los estudiantes sin sobrecargar la experiencia.</p>
-</div>
-<div style="text-align:center"><a class="btn btn-primary" href="gamificacion.html">Ver solución de gamificación →</a></div>
-</div>
-</section><section id="tecnologias">
+<section id="tecnologias">
 <div class="container tech-panel">
 <div class="section-heading">
 <h2>Integramos tu aprendizaje con distintas tecnologías</h2>
@@ -1765,7 +2027,7 @@
 <a href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
 
-<a href="index.htm#catalogo">Catálogo</a>
+<a href="gamificacion.html">Gamificación</a>
 <a href="index.html#areas">Áreas</a>
 <a href="equipo.html">Equipo</a>
 <a href="contacto.html">Contacto</a>
@@ -1792,14 +2054,87 @@
 </div>
 </footer>
 <script>
-    const nav = document.getElementById('mainNav');
-    const toggle = document.querySelector('.mobile-toggle');
+const nav = document.getElementById('mainNav');
+const toggle = document.querySelector('.mobile-toggle');
 
-    toggle.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
-      toggle.textContent = isOpen ? '×' : '☰';
+toggle?.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('is-open');
+  toggle.setAttribute('aria-expanded', String(isOpen));
+  toggle.textContent = isOpen ? '×' : '☰';
+});
+
+document.querySelectorAll('[data-slider]').forEach((slider) => {
+  const track = slider.querySelector('.area-slider-track');
+  const slides = Array.from(track?.querySelectorAll('.area-slide') || []);
+  const prev = slider.querySelector('[data-prev]');
+  const next = slider.querySelector('[data-next]');
+  const progress = slider.querySelector('.area-slider-progress') || slider.parentElement?.querySelector('.area-slider-progress');
+  let current = 0;
+  let autoplayId = null;
+  const delay = 4500;
+
+  if (!track || !slides.length) return;
+
+  function renderDots() {
+    if (!progress) return;
+    progress.innerHTML = slides.map((_, index) => (
+      `<button type="button" class="area-slider-dot${index === current ? ' is-active' : ''}" data-index="${index}" aria-label="Ir al área ${index + 1}"></button>`
+    )).join('');
+
+    progress.querySelectorAll('[data-index]').forEach((dot) => {
+      dot.addEventListener('click', () => {
+        goTo(Number(dot.dataset.index));
+        restartAutoplay();
+      });
     });
-  </script>
+  }
+
+  function updateDots() {
+    if (!progress) return;
+    progress.querySelectorAll('.area-slider-dot').forEach((dot, index) => {
+      dot.classList.toggle('is-active', index === current);
+    });
+  }
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    track.scrollTo({ left: slides[current].offsetLeft, behavior: 'smooth' });
+    updateDots();
+  }
+
+  function nextSlide() { goTo(current + 1); }
+  function prevSlide() { goTo(current - 1); }
+  function stopAutoplay() { if (autoplayId) window.clearInterval(autoplayId); }
+  function startAutoplay() { stopAutoplay(); autoplayId = window.setInterval(nextSlide, delay); }
+  function restartAutoplay() { startAutoplay(); }
+
+  prev?.addEventListener('click', () => { prevSlide(); restartAutoplay(); });
+  next?.addEventListener('click', () => { nextSlide(); restartAutoplay(); });
+
+  track.addEventListener('scroll', () => {
+    const nearestIndex = slides.reduce((nearest, slide, index) => {
+      const currentDistance = Math.abs(track.scrollLeft - slide.offsetLeft);
+      const nearestDistance = Math.abs(track.scrollLeft - slides[nearest].offsetLeft);
+      return currentDistance < nearestDistance ? index : nearest;
+    }, 0);
+
+    if (nearestIndex !== current) {
+      current = nearestIndex;
+      updateDots();
+    }
+  }, { passive: true });
+
+  slider.addEventListener('mouseenter', stopAutoplay);
+  slider.addEventListener('mouseleave', startAutoplay);
+  slider.addEventListener('focusin', stopAutoplay);
+  slider.addEventListener('focusout', startAutoplay);
+  document.addEventListener('visibilitychange', () => {
+    document.hidden ? stopAutoplay() : startAutoplay();
+  });
+
+  renderDots();
+  startAutoplay();
+});
+</script>
 </body>
 </html>
