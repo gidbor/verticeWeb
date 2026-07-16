@@ -1,0 +1,182 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tratamiento de datos personales | Vértice Formación Profesional</title><meta name="description" content="Autorización y lineamientos generales para el tratamiento de datos personales suministrados a Vértice Formación Profesional."><style>
+:root{--navy:#1c355e;--navy2:#233e66;--cyan:#5BC6E8;--magenta:#e6004d;--rose:#e72862;--muted:#5f6f89;--line:#e7edf5;--max:1180px;--shadow:0 20px 55px rgba(28,53,94,.10);--radius-xl:34px;--radius-lg:24px}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--navy);line-height:1.6;background:#fff}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.container{width:min(var(--max),calc(100% - 44px));margin:0 auto}.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{min-height:96px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand-logo{height:62px;max-width:290px;object-fit:contain}.nav-links{display:flex;align-items:center;gap:28px;margin-left:auto;font-size:.92rem;font-weight:700}.nav-links a{position:relative;padding:34px 0}.nav-links a.active::after,.nav-links a:hover::after{content:"";position:absolute;left:0;right:0;bottom:22px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--rose),var(--cyan))}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:14px;font-weight:800}.btn-primary{background:linear-gradient(90deg,#5BC6E8,#e72862);color:#fff;box-shadow:0 18px 36px rgba(231,40,98,.18),0 14px 30px rgba(91,198,232,.18)}.hero{padding:86px 0 54px;background:radial-gradient(circle at 12% 18%,rgba(91,198,232,.16),transparent 28rem),linear-gradient(180deg,#fff,#f8fafc)}.eyebrow{color:var(--cyan);font-size:.82rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}h1{font-size:clamp(2.3rem,4.6vw,4.2rem);line-height:1;letter-spacing:-.05em;margin:0 0 18px}p,li{color:var(--muted);text-align:justify}.legal-card{margin:46px auto 80px;padding:42px;border:1px solid var(--line);border-radius:var(--radius-xl);box-shadow:var(--shadow);background:#fff}.legal-card h2{font-size:1.55rem;margin-top:32px;color:var(--navy)}.legal-card h2:first-child{margin-top:0}.legal-card ul{padding-left:1.2rem}.footer{padding:42px 0 24px;background:#f8fafc;border-top:1px solid var(--line)}.footer-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8a97aa;font-size:.84rem}.footer-bottom div{display:flex;gap:18px;flex-wrap:wrap}.footer-bottom a{color:#5f6f89;font-weight:600}@media(max-width:900px){.nav-links,.header-cta{display:none}.legal-card{padding:26px}.brand-logo{height:48px}}
+
+/* Ajustes catálogo, automotriz y correos */
+.office-card a.email-line,
+.office-card a.mail-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.office-card a.email-line .office-label,
+.office-card a.mail-line .office-label {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.office-card a.email-line .email-value,
+.office-card a.mail-line .email-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.no-break { white-space: nowrap; }
+.programs-highlight {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.program-box {
+  background: #fff;
+  border: 1px solid rgba(28,53,94,.12);
+  border-radius: 24px;
+  padding: 28px 26px;
+  box-shadow: 0 20px 42px rgba(28,53,94,.08);
+  position: relative;
+  overflow: hidden;
+}
+.program-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #233e66, #5BC6E8, #e72862);
+}
+.program-box h3 { margin: 0 0 14px; color: #1c355e; font-size: 1.28rem; }
+.program-box ul { margin: 0; padding-left: 20px; color: #4f607a; line-height: 1.8; }
+.program-box li strong { color: #1c355e; }
+.program-note { margin-top: 16px; color: #5f6f89; }
+.program-box.accent { background: linear-gradient(180deg,#f8fcff 0%,#eef8fd 100%); border-color: rgba(91,198,232,.35); }
+@media (max-width: 760px){ .programs-highlight { grid-template-columns: 1fr; } }
+
+
+/* Ajustes finos catálogo y footer */
+.catalog-hero-card {
+  grid-template-columns: 250px minmax(0, 1fr) 320px !important;
+  gap: 50px !important;
+}
+.catalog-badge-4000 {
+  padding-right: 12px;
+}
+.catalog-content-expanded {
+  padding-left: 8px;
+}
+.catalog-content-expanded h2 {
+  max-width: 760px;
+}
+.footer-grid {
+  grid-template-columns: minmax(240px, 0.95fr) minmax(210px, 0.8fr) minmax(420px, 1.35fr) !important;
+  gap: 34px !important;
+  align-items: start;
+}
+.office-list {
+  width: 100%;
+  max-width: none !important;
+}
+.office-card a.email-line,
+.office-card a.mail-line {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: 6px;
+  width: 100%;
+}
+.office-card a.email-line .email-value,
+.office-card a.mail-line .email-value {
+  line-height: 1.45;
+}
+@media (max-width: 1180px) {
+  .catalog-hero-card {
+    grid-template-columns: 220px minmax(0, 1fr) 290px !important;
+    gap: 34px !important;
+  }
+  .footer-grid {
+    grid-template-columns: minmax(220px,1fr) minmax(190px,.8fr) minmax(340px,1.15fr) !important;
+  }
+}
+@media (max-width: 1100px) {
+  .catalog-hero-card {
+    grid-template-columns: 210px minmax(0, 1fr) !important;
+  }
+  .catalog-download-actions {
+    grid-column: 2 / 3;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 760px) {
+  .catalog-hero-card {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+  .catalog-content-expanded {
+    padding-left: 0;
+  }
+  .catalog-download-actions {
+    grid-column: auto;
+  }
+}
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* Ajuste global footer: más ancho para correos de sedes */
+.footer-grid {
+  grid-template-columns: minmax(220px, 1.05fr) minmax(150px, 0.68fr) minmax(235px, 0.88fr) minmax(430px, 1.65fr) !important;
+  gap: 28px !important;
+}
+.office-list {
+  width: 100% !important;
+  max-width: none !important;
+}
+.office-card a.footer-email-line {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 5px;
+  align-items: start;
+  width: 100%;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+.office-card a.footer-email-line .office-label {
+  white-space: nowrap;
+}
+.office-card a.footer-email-line .footer-email-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+@media (max-width: 1180px) {
+  .footer-grid {
+    grid-template-columns: minmax(220px, 1fr) minmax(170px, .75fr) minmax(320px, 1.15fr) !important;
+  }
+  .footer-grid > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+</style><link href="assets/favicon.png" rel="icon" type="image/png"></head><body><header class="site-header"><nav class="container nav" aria-label="Navegación principal"><a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-vertice.png" alt="Vértice Formación Profesional"></a><div class="nav-links"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="index.html#servicios">Servicios</a><a href="index.html#catalogo">Catálogo</a><a href="index.html#areas">Áreas</a><a href="equipo.html">Equipo</a><a href="contacto.html">Contacto</a></div><a class="btn btn-primary header-cta" href="contacto.html">Solicita información</a></nav></header><main><section class="hero"><div class="container"><div class="eyebrow">Información legal</div><h1>Tratamiento de datos personales</h1><p>Autorización y lineamientos generales para el tratamiento de datos personales suministrados a Vértice Formación Profesional.</p></div></section><section><div class="container legal-card"><h2>Autorización</h2><p>Al diligenciar formularios o contactar a Vértice Formación Profesional, el usuario autoriza el tratamiento de sus datos personales para gestionar solicitudes, comunicaciones comerciales, asesorías y procesos relacionados con soluciones de formación.</p><h2>Finalidades del tratamiento</h2><ul><li>Responder solicitudes de información, cotización o contacto.</li><li>Enviar comunicaciones relacionadas con servicios, contenidos, eventos o soluciones e-learning.</li><li>Gestionar relaciones comerciales, administrativas y de soporte.</li><li>Analizar necesidades para proponer soluciones formativas ajustadas al contexto del cliente.</li></ul><h2>Derechos del titular</h2><p>El titular puede conocer, actualizar, rectificar o solicitar la eliminación de sus datos, así como revocar la autorización cuando sea procedente, enviando una solicitud a los canales de contacto publicados por Vértice Formación Profesional.</p><h2>Conservación</h2><p>Los datos se conservarán durante el tiempo necesario para cumplir las finalidades autorizadas, obligaciones contractuales, comerciales o legales aplicables.</p><h2>Canales de atención</h2><p>Las solicitudes relacionadas con datos personales podrán enviarse a los correos corporativos publicados en la sección de contacto del sitio web.</p></div></section></main><footer class="footer"><div class="container"><div class="footer-bottom">
+<span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
+<div>
+<a href="politica-privacidad.html">Política de privacidad</a>
+<a href="terminos-condiciones.html">Términos y condiciones</a>
+<a href="tratamiento-datos-personales.html">Tratamiento de datos personales</a>
+</div>
+</div>
+</div>
+</footer></body></html>

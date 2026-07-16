@@ -300,6 +300,264 @@
   box-shadow: 0 22px 44px rgba(231, 40, 98, 0.24), 0 16px 34px rgba(91, 198, 232, 0.22) !important;
 }
 
+
+/* Ajustes generales: footer, legales, textos y enlaces */
+.logo-track { animation-duration: 57s !important; }
+.client-logo {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  min-height: 54px !important;
+}
+.btn-primary,
+.header-cta {
+  background: linear-gradient(90deg, #5BC6E8 0%, #e72862 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 36px rgba(231, 40, 98, 0.18), 0 14px 30px rgba(91, 198, 232, 0.18) !important;
+}
+.btn-primary:hover,
+.header-cta:hover {
+  background: linear-gradient(90deg, #46bde3 0%, #d91f58 100%) !important;
+  color: #ffffff !important;
+}
+.footer {
+  padding: 58px 0 28px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbfe 100%) !important;
+  border-top: 1px solid #e7edf5 !important;
+}
+.footer-grid {
+  grid-template-columns: 1.15fr .78fr .95fr 1.25fr !important;
+  gap: 34px !important;
+}
+.footer h4 {
+  color: #1c355e !important;
+  font-size: .94rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .01em !important;
+}
+.footer p,
+.footer a,
+.footer-links a,
+.footer .contact-item,
+.office-list,
+.office-card,
+.office-card span,
+.office-card a {
+  font-size: .86rem !important;
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+  color: #5f6f89 !important;
+}
+.office-list {
+  display: grid !important;
+  gap: 12px !important;
+}
+.office-card {
+  padding: 0 0 12px 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(35,62,102,.08) !important;
+}
+.office-card:last-child { border-bottom: 0 !important; }
+.office-card strong {
+  display: block !important;
+  margin-bottom: 4px !important;
+  color: #1c355e !important;
+  font-size: .92rem !important;
+  font-weight: 800 !important;
+}
+.office-label {
+  color: #5BC6E8 !important;
+  font-size: .82rem !important;
+  font-weight: 700 !important;
+}
+.footer-bottom a { color: #5f6f89 !important; font-weight: 600 !important; }
+.legal-link { color: #1c355e !important; font-weight: 800 !important; text-decoration: underline; text-decoration-color: #5BC6E8; text-underline-offset: 3px; }
+@media(max-width: 900px){ .footer-grid { grid-template-columns: 1fr 1fr !important; } }
+@media(max-width: 640px){ .footer-grid { grid-template-columns: 1fr !important; } }
+
+
+.featured-component {
+  border-color: rgba(91,198,232,.45) !important;
+  background: linear-gradient(180deg, #fff, #f8fcff) !important;
+}
+.featured-component ul { margin: 0; padding-left: 1.15rem; color: var(--muted, #5f6f89); }
+.featured-component li { margin-bottom: 6px; }
+
+
+.programs-highlight{margin-top:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.program-box{background:#fff;border:1px solid rgba(28,53,94,.12);border-radius:22px;padding:26px 24px;box-shadow:0 18px 38px rgba(28,53,94,.08)}.program-box h3{margin:0 0 12px;color:#1c355e;font-size:1.22rem}.program-box ul{margin:0;padding-left:18px;color:#4f607a;line-height:1.7}.program-box li strong{color:#1c355e}.program-note{margin-top:16px;color:#5f6f89}.program-box.accent{background:linear-gradient(180deg,#f8fcff 0%,#eef8fd 100%);border-color:rgba(91,198,232,.35)}@media (max-width:760px){.programs-highlight{grid-template-columns:1fr}}
+
+/* Ajustes catálogo, automotriz y correos */
+.office-card a.email-line,
+.office-card a.mail-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.office-card a.email-line .office-label,
+.office-card a.mail-line .office-label {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.office-card a.email-line .email-value,
+.office-card a.mail-line .email-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.no-break { white-space: nowrap; }
+.programs-highlight {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.program-box {
+  background: #fff;
+  border: 1px solid rgba(28,53,94,.12);
+  border-radius: 24px;
+  padding: 28px 26px;
+  box-shadow: 0 20px 42px rgba(28,53,94,.08);
+  position: relative;
+  overflow: hidden;
+}
+.program-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #233e66, #5BC6E8, #e72862);
+}
+.program-box h3 { margin: 0 0 14px; color: #1c355e; font-size: 1.28rem; }
+.program-box ul { margin: 0; padding-left: 20px; color: #4f607a; line-height: 1.8; }
+.program-box li strong { color: #1c355e; }
+.program-note { margin-top: 16px; color: #5f6f89; }
+.program-box.accent { background: linear-gradient(180deg,#f8fcff 0%,#eef8fd 100%); border-color: rgba(91,198,232,.35); }
+@media (max-width: 760px){ .programs-highlight { grid-template-columns: 1fr; } }
+
+
+/* Ajustes finos catálogo y footer */
+.catalog-hero-card {
+  grid-template-columns: 250px minmax(0, 1fr) 320px !important;
+  gap: 50px !important;
+}
+.catalog-badge-4000 {
+  padding-right: 12px;
+}
+.catalog-content-expanded {
+  padding-left: 8px;
+}
+.catalog-content-expanded h2 {
+  max-width: 760px;
+}
+.footer-grid {
+  grid-template-columns: minmax(240px, 0.95fr) minmax(210px, 0.8fr) minmax(420px, 1.35fr) !important;
+  gap: 34px !important;
+  align-items: start;
+}
+.office-list {
+  width: 100%;
+  max-width: none !important;
+}
+.office-card a.email-line,
+.office-card a.mail-line {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: 6px;
+  width: 100%;
+}
+.office-card a.email-line .email-value,
+.office-card a.mail-line .email-value {
+  line-height: 1.45;
+}
+@media (max-width: 1180px) {
+  .catalog-hero-card {
+    grid-template-columns: 220px minmax(0, 1fr) 290px !important;
+    gap: 34px !important;
+  }
+  .footer-grid {
+    grid-template-columns: minmax(220px,1fr) minmax(190px,.8fr) minmax(340px,1.15fr) !important;
+  }
+}
+@media (max-width: 1100px) {
+  .catalog-hero-card {
+    grid-template-columns: 210px minmax(0, 1fr) !important;
+  }
+  .catalog-download-actions {
+    grid-column: 2 / 3;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 760px) {
+  .catalog-hero-card {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+  .catalog-content-expanded {
+    padding-left: 0;
+  }
+  .catalog-download-actions {
+    grid-column: auto;
+  }
+}
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* Ajuste global footer: más ancho para correos de sedes */
+.footer-grid {
+  grid-template-columns: minmax(220px, 1.05fr) minmax(150px, 0.68fr) minmax(235px, 0.88fr) minmax(430px, 1.65fr) !important;
+  gap: 28px !important;
+}
+.office-list {
+  width: 100% !important;
+  max-width: none !important;
+}
+.office-card a.footer-email-line {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 5px;
+  align-items: start;
+  width: 100%;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+.office-card a.footer-email-line .office-label {
+  white-space: nowrap;
+}
+.office-card a.footer-email-line .footer-email-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+@media (max-width: 1180px) {
+  .footer-grid {
+    grid-template-columns: minmax(220px, 1fr) minmax(170px, .75fr) minmax(320px, 1.15fr) !important;
+  }
+  .footer-grid > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 </style><link href="assets/favicon.png" rel="icon" type="image/png"/></head><body><header class="site-header"><nav aria-label="Navegación principal" class="container nav" id="mainNav"><a aria-label="Vértice Formación Profesional" class="brand" href="index.html"><img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/></a><div aria-label="Secciones del sitio" class="nav-links"><a href="index.html">Inicio</a>
 <a href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
@@ -308,7 +566,10 @@
 <a href="equipo.html">Equipo</a>
 <a href="contacto.html">Contacto</a>
 </div><a class="btn btn-primary header-cta" href="contacto.html">Solicita información</a><button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú" class="mobile-toggle" type="button">☰</button></nav></header>
-<main><section class="hero"><div class="container hero-grid"><div><div class="eyebrow">Área especializada</div><h1>Digitalización para <span class="accent">Automotriz</span></h1><p class="hero-copy">Digitalizamos procesos técnicos, comerciales y operativos para concesionarios, talleres, marcas, distribuidores y asociaciones del sector.</p><div class="hero-actions"><a class="btn btn-primary" href="contacto.html">Diseñar una solución →</a><a class="btn btn-outline" href="index.html#areas">Ver otras áreas</a></div></div><aside class="hero-card"><img alt="" aria-hidden="true" class="hero-area-icon" src="assets/icons/area-automotriz.png"/><h2>Digitalizaciones a medida</h2><p class="section-copy" style="text-align:left">Creamos contenidos, actividades, evaluaciones, cápsulas y rutas de aprendizaje adaptadas al lenguaje y procesos del sector.</p></aside></div></section><section class="section section-soft"><div class="container"><div class="section-heading"><h2>¿Qué podemos crear?</h2><div class="underline"></div><p class="section-copy">Estas son algunas opciones de digitalización que pueden combinarse en cursos, microcápsulas, campus virtual o paquetes SCORM/xAPI.</p></div><div class="cards-grid"><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Cursos de mantenimiento preventivo y diagnóstico</h3><p>Cursos de mantenimiento preventivo y diagnóstico.</p></article><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Microcápsulas sobre seguridad, servicio y atención al cliente</h3><p>Microcápsulas sobre seguridad, servicio y atención al cliente.</p></article><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Simulaciones de procesos de taller y entrega de vehículos</h3><p>Simulaciones de procesos de taller y entrega de vehículos.</p></article><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Evaluaciones técnicas con casos reales y banco de preguntas</h3><p>Evaluaciones técnicas con casos reales y banco de preguntas.</p></article><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Rutas de formación para asesores, técnicos y jefes de servicio</h3><p>Rutas de formación para asesores, técnicos y jefes de servicio.</p></article></div></div></section><section class="section"><div class="container"><div class="section-heading"><h2>Proceso de digitalización para el área Automotriz</h2><div class="underline"></div><p class="section-copy">Así convertimos documentos, procesos, clases, manuales o materiales existentes en experiencias digitales claras, medibles y listas para implementar.</p></div><div class="digitization-flow"><article class="flow-card"><img alt="" aria-hidden="true" src="assets/icons/proceso-diagnostico.png"/><h3>Diagnóstico del proceso</h3><p>Revisamos manuales técnicos, procedimientos de taller, protocolos comerciales y evidencias existentes para definir el alcance formativo.</p></article><article class="flow-card"><img alt="" aria-hidden="true" src="assets/icons/proceso-diseno.png"/><h3>Guion instruccional</h3><p>Transformamos información técnica en una secuencia clara, con lenguaje práctico, casos de uso, actividades y criterios de evaluación.</p></article><article class="flow-card"><img alt="" aria-hidden="true" src="assets/icons/proceso-produccion.png"/><h3>Producción multimedia</h3><p>Creamos recursos visuales, animaciones, fichas, videos cortos, infografías, simulaciones y evaluaciones aplicadas al contexto automotor.</p></article><article class="flow-card"><img alt="" aria-hidden="true" src="assets/icons/proceso-implementacion.png"/><h3>Implementación y medición</h3><p>Publicamos el contenido en LMS, SCORM/xAPI o WhatsApp y configuramos seguimiento de avance, resultados y oportunidades de mejora.</p></article></div><div class="process-note">El resultado puede publicarse como curso SCORM/xAPI, microcápsulas para WhatsApp, ruta LMS o material de apoyo para talleres y equipos comerciales.</div></div></section><section class="section"><div class="container"><div class="cta-banner"><div><h2>Convierte tus contenidos de automotriz en experiencias digitales</h2><p>Diseñamos una solución alineada con tus procesos, audiencia y plataforma.</p></div><a class="btn" href="contacto.html">Hablar con un asesor →</a></div></div></section></main>
+<main><section class="hero"><div class="container hero-grid"><div><div class="eyebrow">Área especializada</div><h1>Digitalización para <span class="accent">Automotriz</span></h1><p class="hero-copy">Digitalizamos procesos técnicos, comerciales y operativos para concesionarios, talleres, marcas, distribuidores y asociaciones del sector.</p><div class="hero-actions"><a class="btn btn-primary" href="contacto.html">Diseñar una solución →</a><a class="btn btn-outline" href="index.html#areas">Ver otras áreas</a></div></div><aside class="hero-card"><img alt="" aria-hidden="true" class="hero-area-icon" src="assets/icons/area-automotriz.png"/><h2>Digitalizaciones a medida</h2><p class="section-copy" style="text-align:left">Creamos contenidos, actividades, evaluaciones, cápsulas y rutas de aprendizaje adaptadas al lenguaje y procesos del sector.</p></aside></div></section><section class="section section-soft"><div class="container"><div class="section-heading"><h2>¿Qué podemos crear?</h2><div class="underline"></div><p class="section-copy">Estas son algunas opciones de digitalización que pueden combinarse en cursos, microcápsulas, campus virtual o paquetes SCORM/xAPI.</p></div><div class="cards-grid"><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Cursos de mantenimiento preventivo y diagnóstico</h3><p>Cursos de mantenimiento preventivo y diagnóstico.</p></article><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Microcápsulas sobre seguridad, servicio y atención al cliente</h3><p>Microcápsulas sobre seguridad, servicio y atención al cliente.</p></article><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Simulaciones de procesos de taller y entrega de vehículos</h3><p>Simulaciones de procesos de taller y entrega de vehículos.</p></article><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Evaluaciones técnicas con casos reales y banco de preguntas</h3><p>Evaluaciones técnicas con casos reales y banco de preguntas.</p></article><article class="info-card"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Rutas de formación para asesores, técnicos y jefes de servicio</h3><p>Rutas de formación para asesores, técnicos y jefes de servicio.</p></article><article class="info-card featured-component"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-automotriz.png"/></div><h3>Cursos técnicos y diplomados</h3><ul><li>Vehículos híbridos</li><li>Vehículos eléctricos</li><li>Motos</li></ul></article><article class="info-card featured-component"><div class="icon image-icon"><img alt="" aria-hidden="true" src="assets/icons/area-logistica.png"/></div><h3>Cursos especializados y diplomados</h3><ul><li>Logística aplicada al sector automotor</li><li>Gestión de repuestos</li></ul></article></div><div class="programs-highlight">
+<article class="program-box accent"><h3>Cursos técnicos y diplomados en</h3><ul><li><strong>Vehículos híbridos</strong></li><li><strong>Vehículos eléctricos</strong></li><li><strong>Motos</strong></li></ul><p class="program-note">Programas ideales para actualización técnica, formación comercial y desarrollo de talento en nuevas tecnologías del sector automotriz.</p></article>
+<article class="program-box"><h3>Cursos especializados y diplomados en</h3><ul><li><strong>Logística</strong></li><li><strong>Repuestos</strong></li></ul><p class="program-note">Soluciones enfocadas en abastecimiento, inventarios, distribución, posventa y operación de la cadena de valor automotriz.</p></article>
+</div></div></section><section class="section"><div class="container"><div class="section-heading"><h2>Proceso de digitalización para el área Automotriz</h2><div class="underline"></div><p class="section-copy">Así convertimos documentos, procesos, clases, manuales o materiales existentes en experiencias digitales claras, medibles y listas para implementar.</p></div><div class="digitization-flow"><article class="flow-card"><img alt="" aria-hidden="true" src="assets/icons/proceso-diagnostico.png"/><h3>Diagnóstico del proceso</h3><p>Revisamos manuales técnicos, procedimientos de taller, protocolos comerciales y evidencias existentes para definir el alcance formativo.</p></article><article class="flow-card"><img alt="" aria-hidden="true" src="assets/icons/proceso-diseno.png"/><h3>Guion instruccional</h3><p>Transformamos información técnica en una secuencia clara, con lenguaje práctico, casos de uso, actividades y criterios de evaluación.</p></article><article class="flow-card"><img alt="" aria-hidden="true" src="assets/icons/proceso-produccion.png"/><h3>Producción multimedia</h3><p>Creamos recursos visuales, animaciones, fichas, videos cortos, infografías, simulaciones y evaluaciones aplicadas al contexto automotor.</p></article><article class="flow-card"><img alt="" aria-hidden="true" src="assets/icons/proceso-implementacion.png"/><h3>Implementación y medición</h3><p>Publicamos el contenido en LMS, SCORM/xAPI o WhatsApp y configuramos seguimiento de avance, resultados y oportunidades de mejora.</p></article></div><div class="process-note">El resultado puede publicarse como curso SCORM/xAPI, microcápsulas para WhatsApp, ruta LMS o material de apoyo para talleres y equipos comerciales.</div></div></section><section class="section"><div class="container"><div class="cta-banner"><div><h2>Convierte tus contenidos de automotriz en experiencias digitales</h2><p>Diseñamos una solución alineada con tus procesos, audiencia y plataforma.</p></div><a class="btn" href="contacto.html">Contactenos →</a></div></div></section></main>
 <footer class="footer"><div class="container"><div class="footer-grid"><div><a aria-label="Vértice Formación Profesional" class="brand" href="index.html"><img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/></a><p>Creamos experiencias de aprendizaje digital que conectan con las personas y generan resultados.</p></div><div><h4>Enlaces rápidos</h4><div class="footer-links"><a href="index.html">Inicio</a>
 <a href="nosotros.html">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
@@ -316,7 +577,25 @@
 <a href="index.html#areas">Áreas</a>
 <a href="equipo.html">Equipo</a>
 <a href="contacto.html">Contacto</a>
-</div></div><div><h4>Servicios</h4><div class="footer-links"><a href="servicio-plataforma-lms.html">Plataforma LMS</a><a href="servicio-digitalizacion-contenidos.html">Creación y digitalización de contenidos</a><a href="servicio-cursos-whatsapp.html">Cursos en WhatsApp</a><a href="servicio-lms-flexible.html">LMS flexible</a><a href="servicio-scorm-xapi.html">SCORM y xAPI</a><a href="gamificacion.html">Gamificación</a></div></div><div><h4>Contacto</h4><div class="office-list"><div class="office-card"><strong>Bogotá</strong><span><span class="office-label">Dirección:</span> Carrera. 9 No. 115-06 local 01</span><span><span class="office-label">WhatsApp:</span> (57) 3203013190</span><a href="mailto:boris.mejia@verticeformacionprofesional.com"><span class="office-label">Correo:</span> boris.mejia@verticeformacionprofesional.com</a></div><div class="office-card"><strong>Medellín</strong><span><span class="office-label">Dirección:</span> Carrera 27 D - 36 C Sur - 80</span><span><span class="office-label">WhatsApp:</span> (57) 3013256644</span><a href="mailto:lina.villa@verticeformacionprofesional.com"><span class="office-label">Correo:</span> lina.villa@verticeformacionprofesional.com</a></div><div class="office-card"><strong>Quito</strong><span><span class="office-label">Dirección:</span> Jambelí OE3-158 y la Unión</span><span><span class="office-label">WhatsApp:</span> (593) 969077207</span><a href="mailto:borismejia@istte.edu.ec"><span class="office-label">Correo:</span> borismejia@istte.edu.ec</a></div></div></div></div><div class="footer-bottom"><span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span><div><a href="#">Política de privacidad</a><a href="#">Términos y condiciones</a></div></div></div></footer>
+</div></div><div>
+<h4>Servicios</h4>
+<div class="footer-links"><a href="servicio-plataforma-lms.html">Plataforma LMS</a>
+<a href="servicio-digitalizacion-contenidos.html">Creación y digitalización de contenidos</a>
+<a href="servicio-cursos-whatsapp.html">Cursos en WhatsApp</a>
+<a href="servicio-lms-flexible.html">LMS flexible</a>
+<a href="servicio-scorm-xapi.html">SCORM y xAPI</a>
+<a href="gamificacion.html">Gamificación</a>
+</div>
+</div><div><h4>Contacto</h4><div class="office-list"><div class="office-card"><strong>Bogotá</strong><span><span class="office-label">Dirección:</span> Carrera. 9 No. 115-06 local 01</span><span><span class="office-label">WhatsApp:</span> (57) 3203013190</span><a class="footer-email-line" href="mailto:boris.mejia@verticeformacionprofesional.com"><span class="office-label">Correo:</span><span class="footer-email-value">boris.mejia@verticeformacionprofesional.com</span></a></div><div class="office-card"><strong>Medellín</strong><span><span class="office-label">Dirección:</span> Carrera 27 D - 36 C Sur - 80</span><span><span class="office-label">WhatsApp:</span> (57) 3013256644</span><a class="footer-email-line" href="mailto:lina.villa@verticeformacionprofesional.com"><span class="office-label">Correo:</span><span class="footer-email-value">lina.villa@verticeformacionprofesional.com</span></a></div><div class="office-card"><strong>Quito</strong><span><span class="office-label">Dirección:</span> Jambelí OE3-158 y la Unión</span><span><span class="office-label">WhatsApp:</span> (593) 969077207</span><a class="footer-email-line" href="mailto:borismejia@istte.edu.ec"><span class="office-label">Correo:</span><span class="footer-email-value">borismejia@istte.edu.ec</span></a></div></div></div></div><div class="footer-bottom">
+<span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
+<div>
+<a href="politica-privacidad.html">Política de privacidad</a>
+<a href="terminos-condiciones.html">Términos y condiciones</a>
+<a href="tratamiento-datos-personales.html">Tratamiento de datos personales</a>
+</div>
+</div>
+</div>
+</footer>
 <script>
 const nav=document.getElementById('mainNav');
 const toggle=document.querySelector('.mobile-toggle');

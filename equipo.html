@@ -1069,6 +1069,259 @@
   box-shadow: 0 22px 44px rgba(231, 40, 98, 0.24), 0 16px 34px rgba(91, 198, 232, 0.22) !important;
 }
 
+
+/* Ajustes generales: footer, legales, textos y enlaces */
+.logo-track { animation-duration: 57s !important; }
+.client-logo {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  min-height: 54px !important;
+}
+.btn-primary,
+.header-cta {
+  background: linear-gradient(90deg, #5BC6E8 0%, #e72862 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 36px rgba(231, 40, 98, 0.18), 0 14px 30px rgba(91, 198, 232, 0.18) !important;
+}
+.btn-primary:hover,
+.header-cta:hover {
+  background: linear-gradient(90deg, #46bde3 0%, #d91f58 100%) !important;
+  color: #ffffff !important;
+}
+.footer {
+  padding: 58px 0 28px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbfe 100%) !important;
+  border-top: 1px solid #e7edf5 !important;
+}
+.footer-grid {
+  grid-template-columns: 1.15fr .78fr .95fr 1.25fr !important;
+  gap: 34px !important;
+}
+.footer h4 {
+  color: #1c355e !important;
+  font-size: .94rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .01em !important;
+}
+.footer p,
+.footer a,
+.footer-links a,
+.footer .contact-item,
+.office-list,
+.office-card,
+.office-card span,
+.office-card a {
+  font-size: .86rem !important;
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+  color: #5f6f89 !important;
+}
+.office-list {
+  display: grid !important;
+  gap: 12px !important;
+}
+.office-card {
+  padding: 0 0 12px 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(35,62,102,.08) !important;
+}
+.office-card:last-child { border-bottom: 0 !important; }
+.office-card strong {
+  display: block !important;
+  margin-bottom: 4px !important;
+  color: #1c355e !important;
+  font-size: .92rem !important;
+  font-weight: 800 !important;
+}
+.office-label {
+  color: #5BC6E8 !important;
+  font-size: .82rem !important;
+  font-weight: 700 !important;
+}
+.footer-bottom a { color: #5f6f89 !important; font-weight: 600 !important; }
+.legal-link { color: #1c355e !important; font-weight: 800 !important; text-decoration: underline; text-decoration-color: #5BC6E8; text-underline-offset: 3px; }
+@media(max-width: 900px){ .footer-grid { grid-template-columns: 1fr 1fr !important; } }
+@media(max-width: 640px){ .footer-grid { grid-template-columns: 1fr !important; } }
+
+
+/* Justificación de textos en página Equipo */
+.hero-copy, .contact-card p, .team-content p, main p { text-align: justify !important; }
+.section-heading .section-copy { text-align: center !important; }
+
+
+/* Ajustes catálogo, automotriz y correos */
+.office-card a.email-line,
+.office-card a.mail-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.office-card a.email-line .office-label,
+.office-card a.mail-line .office-label {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.office-card a.email-line .email-value,
+.office-card a.mail-line .email-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.no-break { white-space: nowrap; }
+.programs-highlight {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.program-box {
+  background: #fff;
+  border: 1px solid rgba(28,53,94,.12);
+  border-radius: 24px;
+  padding: 28px 26px;
+  box-shadow: 0 20px 42px rgba(28,53,94,.08);
+  position: relative;
+  overflow: hidden;
+}
+.program-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #233e66, #5BC6E8, #e72862);
+}
+.program-box h3 { margin: 0 0 14px; color: #1c355e; font-size: 1.28rem; }
+.program-box ul { margin: 0; padding-left: 20px; color: #4f607a; line-height: 1.8; }
+.program-box li strong { color: #1c355e; }
+.program-note { margin-top: 16px; color: #5f6f89; }
+.program-box.accent { background: linear-gradient(180deg,#f8fcff 0%,#eef8fd 100%); border-color: rgba(91,198,232,.35); }
+@media (max-width: 760px){ .programs-highlight { grid-template-columns: 1fr; } }
+
+
+/* Ajustes finos catálogo y footer */
+.catalog-hero-card {
+  grid-template-columns: 250px minmax(0, 1fr) 320px !important;
+  gap: 50px !important;
+}
+.catalog-badge-4000 {
+  padding-right: 12px;
+}
+.catalog-content-expanded {
+  padding-left: 8px;
+}
+.catalog-content-expanded h2 {
+  max-width: 760px;
+}
+.footer-grid {
+  grid-template-columns: minmax(240px, 0.95fr) minmax(210px, 0.8fr) minmax(420px, 1.35fr) !important;
+  gap: 34px !important;
+  align-items: start;
+}
+.office-list {
+  width: 100%;
+  max-width: none !important;
+}
+.office-card a.email-line,
+.office-card a.mail-line {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: 6px;
+  width: 100%;
+}
+.office-card a.email-line .email-value,
+.office-card a.mail-line .email-value {
+  line-height: 1.45;
+}
+@media (max-width: 1180px) {
+  .catalog-hero-card {
+    grid-template-columns: 220px minmax(0, 1fr) 290px !important;
+    gap: 34px !important;
+  }
+  .footer-grid {
+    grid-template-columns: minmax(220px,1fr) minmax(190px,.8fr) minmax(340px,1.15fr) !important;
+  }
+}
+@media (max-width: 1100px) {
+  .catalog-hero-card {
+    grid-template-columns: 210px minmax(0, 1fr) !important;
+  }
+  .catalog-download-actions {
+    grid-column: 2 / 3;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 760px) {
+  .catalog-hero-card {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+  .catalog-content-expanded {
+    padding-left: 0;
+  }
+  .catalog-download-actions {
+    grid-column: auto;
+  }
+}
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* Ajuste global footer: más ancho para correos de sedes */
+.footer-grid {
+  grid-template-columns: minmax(220px, 1.05fr) minmax(150px, 0.68fr) minmax(235px, 0.88fr) minmax(430px, 1.65fr) !important;
+  gap: 28px !important;
+}
+.office-list {
+  width: 100% !important;
+  max-width: none !important;
+}
+.office-card a.footer-email-line {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 5px;
+  align-items: start;
+  width: 100%;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+.office-card a.footer-email-line .office-label {
+  white-space: nowrap;
+}
+.office-card a.footer-email-line .footer-email-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+@media (max-width: 1180px) {
+  .footer-grid {
+    grid-template-columns: minmax(220px, 1fr) minmax(170px, .75fr) minmax(320px, 1.15fr) !important;
+  }
+  .footer-grid > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 </style>
 <link href="assets/favicon.png" rel="icon" type="image/png"/></head>
 <body>
@@ -1093,7 +1346,7 @@
 <p class="hero-copy">Un equipo multidisciplinario que integra gestión, tecnología, proyectos,
                         sistemas, desarrollo de negocios y comunicación para acompañar soluciones e-learning de alto
                         impacto.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="contacto.html">Hablar con un asesor
+<div class="hero-actions"><a class="btn btn-primary" href="contacto.html">Contactenos
                             →</a><a class="btn btn-outline" href="nosotros.html">Conocer la empresa</a></div>
 </div>
 <aside class="contact-card">
@@ -1150,11 +1403,12 @@
 <p>Dirige la estrategia tecnológica de la organización, integrando plataformas LMS, herramientas digitales y soluciones innovadoras que potencian experiencias de aprendizaje virtual seguras, eficientes y escalables.</p>
 </div>
 </article>
+
 <article class="team-card">
-<div aria-label="Foto de Antonia Méndez V." class="team-photo arturo" role="img"></div>
+<div aria-label="Foto de Arturo García" class="team-photo arturo" role="img"></div>
 <div class="team-content">
-<h3>Arturo García</h3><span class="role">Community Manager</span>
-<p>Fortalece la presencia digital de Vértice Formación Profesional mediante estrategias de comunicación, creación de contenido y gestión de comunidades, promoviendo el valor de la formación virtual y el aprendizaje continuo.</p>
+<h3>Arturo García</h3><span class="role">Área de IT y Comunicación Digital</span>
+<p>Apoya la administración de sistemas, soporte tecnológico e infraestructura digital, y fortalece la presencia digital de Vértice Formación Profesional mediante gestión de contenidos, comunicación y acompañamiento a comunidades digitales.</p>
 </div>
 </article>
 </div>
@@ -1167,7 +1421,7 @@
 <h2>Trabajemos juntos en tu próximo proyecto</h2>
 <p>Conversemos sobre tus necesidades de formación online, contenidos, LMS o integración
                             tecnológica.</p>
-</div><a class="btn" href="contacto.html">Contactar equipo →</a>
+</div><a class="btn" href="contacto.html">Contactenos →</a>
 </div>
 </div>
 </section>
@@ -1198,12 +1452,18 @@
 <a href="servicio-cursos-whatsapp.html">Cursos en WhatsApp</a>
 <a href="servicio-lms-flexible.html">LMS flexible</a>
 <a href="servicio-scorm-xapi.html">SCORM y xAPI</a>
+<a href="gamificacion.html">Gamificación</a>
 </div>
 </div>
-<div><h4>Contacto</h4><div class="office-list"><div class="office-card"><strong>Bogotá</strong><span><span class="office-label">Dirección:</span> Carrera. 9 No. 115-06 local 01</span><span><span class="office-label">WhatsApp:</span> (57) 3203013190</span><a href="mailto:boris.mejia@verticeformacionprofesional.com"><span class="office-label">Correo:</span> boris.mejia@verticeformacionprofesional.com</a></div><div class="office-card"><strong>Medellín</strong><span><span class="office-label">Dirección:</span> Carrera 27 D - 36 C Sur - 80</span><span><span class="office-label">WhatsApp:</span> (57) 3013256644</span><a href="mailto:lina.villa@verticeformacionprofesional.com"><span class="office-label">Correo:</span> lina.villa@verticeformacionprofesional.com</a></div><div class="office-card"><strong>Quito</strong><span><span class="office-label">Dirección:</span> Jambelí OE3-158 y la Unión</span><span><span class="office-label">WhatsApp:</span> (593) 969077207</span><a href="mailto:borismejia@istte.edu.ec"><span class="office-label">Correo:</span> borismejia@istte.edu.ec</a></div></div></div>
+<div><h4>Contacto</h4><div class="office-list"><div class="office-card"><strong>Bogotá</strong><span><span class="office-label">Dirección:</span> Carrera. 9 No. 115-06 local 01</span><span><span class="office-label">WhatsApp:</span> (57) 3203013190</span><a class="footer-email-line" href="mailto:boris.mejia@verticeformacionprofesional.com"><span class="office-label">Correo:</span><span class="footer-email-value">boris.mejia@verticeformacionprofesional.com</span></a></div><div class="office-card"><strong>Medellín</strong><span><span class="office-label">Dirección:</span> Carrera 27 D - 36 C Sur - 80</span><span><span class="office-label">WhatsApp:</span> (57) 3013256644</span><a class="footer-email-line" href="mailto:lina.villa@verticeformacionprofesional.com"><span class="office-label">Correo:</span><span class="footer-email-value">lina.villa@verticeformacionprofesional.com</span></a></div><div class="office-card"><strong>Quito</strong><span><span class="office-label">Dirección:</span> Jambelí OE3-158 y la Unión</span><span><span class="office-label">WhatsApp:</span> (593) 969077207</span><a class="footer-email-line" href="mailto:borismejia@istte.edu.ec"><span class="office-label">Correo:</span><span class="footer-email-value">borismejia@istte.edu.ec</span></a></div></div></div>
 </div>
-<div class="footer-bottom"><span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
-<div><a href="#">Política de privacidad</a><a href="#">Términos y condiciones</a></div>
+<div class="footer-bottom">
+<span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
+<div>
+<a href="politica-privacidad.html">Política de privacidad</a>
+<a href="terminos-condiciones.html">Términos y condiciones</a>
+<a href="tratamiento-datos-personales.html">Tratamiento de datos personales</a>
+</div>
 </div>
 </div>
 </footer>

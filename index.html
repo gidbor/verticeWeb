@@ -1766,6 +1766,285 @@
   .services-grid > .service-card[href="gamificacion.html"] { grid-column: auto; }
 }
 
+
+/* Ajustes generales: footer, legales, textos y enlaces */
+.logo-track { animation-duration: 57s !important; }
+.client-logo {
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  min-height: 54px !important;
+}
+.btn-primary,
+.header-cta {
+  background: linear-gradient(90deg, #5BC6E8 0%, #e72862 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 36px rgba(231, 40, 98, 0.18), 0 14px 30px rgba(91, 198, 232, 0.18) !important;
+}
+.btn-primary:hover,
+.header-cta:hover {
+  background: linear-gradient(90deg, #46bde3 0%, #d91f58 100%) !important;
+  color: #ffffff !important;
+}
+.footer {
+  padding: 58px 0 28px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbfe 100%) !important;
+  border-top: 1px solid #e7edf5 !important;
+}
+.footer-grid {
+  grid-template-columns: 1.15fr .78fr .95fr 1.25fr !important;
+  gap: 34px !important;
+}
+.footer h4 {
+  color: #1c355e !important;
+  font-size: .94rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .01em !important;
+}
+.footer p,
+.footer a,
+.footer-links a,
+.footer .contact-item,
+.office-list,
+.office-card,
+.office-card span,
+.office-card a {
+  font-size: .86rem !important;
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+  color: #5f6f89 !important;
+}
+.office-list {
+  display: grid !important;
+  gap: 12px !important;
+}
+.office-card {
+  padding: 0 0 12px 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(35,62,102,.08) !important;
+}
+.office-card:last-child { border-bottom: 0 !important; }
+.office-card strong {
+  display: block !important;
+  margin-bottom: 4px !important;
+  color: #1c355e !important;
+  font-size: .92rem !important;
+  font-weight: 800 !important;
+}
+.office-label {
+  color: #5BC6E8 !important;
+  font-size: .82rem !important;
+  font-weight: 700 !important;
+}
+.footer-bottom a { color: #5f6f89 !important; font-weight: 600 !important; }
+.legal-link { color: #1c355e !important; font-weight: 800 !important; text-decoration: underline; text-decoration-color: #5BC6E8; text-underline-offset: 3px; }
+@media(max-width: 900px){ .footer-grid { grid-template-columns: 1fr 1fr !important; } }
+@media(max-width: 640px){ .footer-grid { grid-template-columns: 1fr !important; } }
+
+
+/* Catálogo con énfasis 4000 y gamificación centrada */
+.catalog-download-card {
+  grid-template-columns: 1fr 280px !important;
+}
+.catalog-download-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: center;
+}
+.catalog-number {
+  display: grid;
+  place-items: center;
+  width: 168px;
+  height: 168px;
+  border-radius: 34px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.24);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 24px 50px rgba(0,0,0,.12);
+  backdrop-filter: blur(12px);
+}
+.catalog-number strong {
+  display: block;
+  color: #5BC6E8;
+  font-size: clamp(2.6rem, 5vw, 4.45rem);
+  line-height: .9;
+  letter-spacing: -.07em;
+  font-weight: 900;
+}
+.catalog-number span {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255,255,255,.86);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.no-break { white-space: nowrap; }
+.catalog-file-preview.catalog-download-inline {
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease;
+}
+.catalog-file-preview.catalog-download-inline:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.18);
+}
+.catalog-file-text strong { font-size: 1rem !important; }
+.service-card.is-centered-service {
+  grid-column: 3 / 4;
+}
+@media(max-width: 1100px){
+  .catalog-download-card, .catalog-download-content { grid-template-columns: 1fr !important; }
+  .catalog-number { width: 140px; height: 140px; }
+  .service-card.is-centered-service { grid-column: auto; }
+}
+@media(max-width: 640px){
+  .catalog-number { width: 120px; height: 120px; }
+}
+
+
+
+/* Ajuste final solicitado: mantener tamaños base del index y solo abrir espacio catálogo/footer */
+.catalog-download-content {
+  grid-template-columns: 150px minmax(0, 1fr) !important;
+  gap: 52px !important;
+  align-items: center !important;
+}
+
+.catalog-number {
+  width: 150px !important;
+  height: 150px !important;
+  transform: translateX(-10px);
+}
+
+.catalog-number strong {
+  font-size: clamp(2.55rem, 4.35vw, 3.85rem) !important;
+  letter-spacing: -0.065em !important;
+}
+
+.catalog-number span {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+.catalog-download-card h2 {
+  max-width: 760px !important;
+}
+
+.footer-grid {
+  grid-template-columns: minmax(220px, 1.05fr) minmax(150px, 0.68fr) minmax(235px, 0.88fr) minmax(430px, 1.65fr) !important;
+  gap: 28px !important;
+}
+
+.office-list {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.office-card a.footer-email-line {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 5px;
+  align-items: start;
+  width: 100%;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.office-card a.footer-email-line .office-label {
+  white-space: nowrap;
+}
+
+.office-card a.footer-email-line .footer-email-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 1180px) {
+  .footer-grid {
+    grid-template-columns: minmax(220px, 1fr) minmax(170px, .75fr) minmax(320px, 1.15fr) !important;
+  }
+
+  .footer-grid > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .catalog-download-content {
+    grid-template-columns: 135px minmax(0, 1fr) !important;
+    gap: 36px !important;
+  }
+
+  .catalog-number {
+    width: 135px !important;
+    height: 135px !important;
+    transform: translateX(-4px);
+  }
+}
+
+@media (max-width: 860px) {
+  .catalog-download-content {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .catalog-number {
+    transform: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* Ajuste global footer: más ancho para correos de sedes */
+.footer-grid {
+  grid-template-columns: minmax(220px, 1.05fr) minmax(150px, 0.68fr) minmax(235px, 0.88fr) minmax(430px, 1.65fr) !important;
+  gap: 28px !important;
+}
+.office-list {
+  width: 100% !important;
+  max-width: none !important;
+}
+.office-card a.footer-email-line {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 5px;
+  align-items: start;
+  width: 100%;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+.office-card a.footer-email-line .office-label {
+  white-space: nowrap;
+}
+.office-card a.footer-email-line .footer-email-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+@media (max-width: 1180px) {
+  .footer-grid {
+    grid-template-columns: minmax(220px, 1fr) minmax(170px, .75fr) minmax(320px, 1.15fr) !important;
+  }
+  .footer-grid > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 </style>
 <link href="assets/favicon.png" rel="icon" type="image/png"/></head>
 <body>
@@ -1833,21 +2112,18 @@
 <div class="container">
 <div class="catalog-download-card">
 <div class="catalog-download-content">
+<div class="catalog-number"><div><strong>4.000+</strong><span>contenidos</span></div></div>
+<div>
 <div class="catalog-kicker">Catálogo de contenidos</div>
-<h2>Descarga nuestro catálogo e-learning</h2>
-<p>Consulta la oferta de +4000 contenidos disponibles a la medida. incluyen número de horas, objetivos y contenidos, para implementar en campus virtuales, plataformas LMS, procesos corporativos y proyectos de formación a la medida.</p>
+<h2>Descarga nuestro catálogo <span class="no-break">e&#8209;learning</span></h2>
+<p>Consulta una biblioteca de más de 4.000 contenidos disponibles para implementar en campus virtuales, plataformas LMS, procesos corporativos y proyectos de formación a la medida.</p>
+</div>
 </div>
 <div class="catalog-download-actions">
-<a class="catalog-download-button" download="" href="assets/docs/catalogo_vertice_cloud.xlsx">
-          Descargar Excel →
-        </a>
-<div aria-label="Archivo de catálogo disponible" class="catalog-file-preview">
+<a class="catalog-file-preview catalog-download-inline" download="" href="assets/docs/catalogo_vertice_cloud.xlsx" aria-label="Descargar Excel del catálogo de contenidos">
 <div class="catalog-file-icon">XLS</div>
-<div class="catalog-file-text">
-<strong>catalogo_vertice_cloud.xlsx</strong>
-<span>Archivo Excel editable</span>
-</div>
-</div>
+<div class="catalog-file-text"><strong>Descargar Excel</strong></div>
+</a>
 </div>
 </div>
 </div>
@@ -1885,7 +2161,7 @@
 <h3>SCORM y xAPI</h3>
 <p>Convertimos y empaquetamos contenidos para facilitar su instalación y seguimiento en plataformas LMS.</p>
 </a>
-<a class="service-card card-link service-highlight" href="gamificacion.html">
+<a class="service-card card-link service-highlight is-centered-service" href="gamificacion.html">
 <div aria-hidden="true" class="line-icon"><img alt="" class="icon-img" src="assets/icons/icono-aprendizaje-alto-impacto.png"/></div>
 <h3>Gamificación</h3>
 <p>Integramos insignias, retos, puntos, niveles y dinámicas de avance para motivar la participación y la permanencia.</p>
@@ -2003,7 +2279,7 @@
 <h2>Conversemos sobre tu proyecto de formación</h2>
 <p>Diseñamos soluciones e-learning alineadas con tus objetivos.</p>
 </div>
-<a class="btn" href="contacto.html">Hablar con un asesor →</a>
+<a class="btn" href="contacto.html">Contactenos →</a>
 </div>
 </div>
 </section>
@@ -2040,15 +2316,17 @@
 <a href="servicio-cursos-whatsapp.html">Cursos en WhatsApp</a>
 <a href="servicio-lms-flexible.html">LMS flexible</a>
 <a href="servicio-scorm-xapi.html">SCORM y xAPI</a>
+<a href="gamificacion.html">Gamificación</a>
 </div>
 </div>
-<div><h4>Contacto</h4><div class="office-list"><div class="office-card"><strong>Bogotá</strong><span><span class="office-label">Dirección:</span> Carrera. 9 No. 115-06 local 01</span><span><span class="office-label">WhatsApp:</span> (57) 3203013190</span><a href="mailto:boris.mejia@verticeformacionprofesional.com"><span class="office-label">Correo:</span> boris.mejia@verticeformacionprofesional.com</a></div><div class="office-card"><strong>Medellín</strong><span><span class="office-label">Dirección:</span> Carrera 27 D - 36 C Sur - 80</span><span><span class="office-label">WhatsApp:</span> (57) 3013256644</span><a href="mailto:lina.villa@verticeformacionprofesional.com"><span class="office-label">Correo:</span> lina.villa@verticeformacionprofesional.com</a></div><div class="office-card"><strong>Quito</strong><span><span class="office-label">Dirección:</span> Jambelí OE3-158 y la Unión</span><span><span class="office-label">WhatsApp:</span> (593) 969077207</span><a href="mailto:borismejia@istte.edu.ec"><span class="office-label">Correo:</span> borismejia@istte.edu.ec</a></div></div></div>
+<div><h4>Contacto</h4><div class="office-list"><div class="office-card"><strong>Bogotá</strong><span><span class="office-label">Dirección:</span> Carrera. 9 No. 115-06 local 01</span><span><span class="office-label">WhatsApp:</span> (57) 3203013190</span><a class="footer-email-line" href="mailto:boris.mejia@verticeformacionprofesional.com"><span class="office-label">Correo:</span><span class="footer-email-value">boris.mejia@verticeformacionprofesional.com</span></a></div><div class="office-card"><strong>Medellín</strong><span><span class="office-label">Dirección:</span> Carrera 27 D - 36 C Sur - 80</span><span><span class="office-label">WhatsApp:</span> (57) 3013256644</span><a class="footer-email-line" href="mailto:lina.villa@verticeformacionprofesional.com"><span class="office-label">Correo:</span><span class="footer-email-value">lina.villa@verticeformacionprofesional.com</span></a></div><div class="office-card"><strong>Quito</strong><span><span class="office-label">Dirección:</span> Jambelí OE3-158 y la Unión</span><span><span class="office-label">WhatsApp:</span> (593) 969077207</span><a class="footer-email-line" href="mailto:borismejia@istte.edu.ec"><span class="office-label">Correo:</span><span class="footer-email-value">borismejia@istte.edu.ec</span></a></div></div></div>
 </div>
 <div class="footer-bottom">
 <span>© 2026 Vértice Formación Profesional. Todos los derechos reservados.</span>
 <div>
-<a href="#">Política de privacidad</a>
-<a href="#">Términos y condiciones</a>
+<a href="politica-privacidad.html">Política de privacidad</a>
+<a href="terminos-condiciones.html">Términos y condiciones</a>
+<a href="tratamiento-datos-personales.html">Tratamiento de datos personales</a>
 </div>
 </div>
 </div>
