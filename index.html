@@ -741,21 +741,40 @@
       font-size: 0.94rem;
     }
 
+    
     .socials {
       display: flex;
-      gap: 10px;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .socials a {
-      width: 36px;
-      height: 36px;
-      display: grid;
-      place-items: center;
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 999px;
-      color: #fff;
-      background: var(--navy);
-      font-weight: 800;
-      font-size: 0.85rem;
+      background: #233e66;
+      box-shadow: 0 12px 24px rgba(35, 62, 102, 0.18);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .socials a:hover {
+      transform: translateY(-2px);
+      background: #5BC6E8;
+      box-shadow: 0 16px 30px rgba(91, 198, 232, 0.24);
+    }
+
+    .socials a img {
+      width: 19px;
+      height: 19px;
+      display: block;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
     }
 
     .footer h4 {
@@ -2045,7 +2064,6 @@
   }
 }
 
-.socials a[aria-label="YouTube"]{display:none!important;}
 </style>
 <link href="assets/favicon.png" rel="icon" type="image/png"/></head>
 <body>
@@ -2117,7 +2135,7 @@
 <div>
 <div class="catalog-kicker">Catálogo de contenidos</div>
 <h2>Descarga nuestro catálogo <span class="no-break">e&#8209;learning</span></h2>
-<p>Consulta una biblioteca de más de 4.000 contenidos disponibles para implementar en campus virtuales, plataformas LMS, procesos corporativos y proyectos de formación a la medida. Cada contenido incluye número de horas, objetivos y contenido.</p>
+<p>Consulta una biblioteca de más de 4.000 contenidos disponibles para implementar en campus virtuales, plataformas LMS, procesos corporativos y proyectos de formación a la medida. Cada curso incluye número de horas, objetivos y contenido.</p>
 </div>
 </div>
 <div class="catalog-download-actions">
@@ -2292,10 +2310,9 @@
 <a aria-label="Vértice Formación Profesional" class="brand" href="#inicio"><img alt="Vértice Formación Profesional" class="brand-logo" src="assets/logo-vertice.png"/></a>
 <p>Creamos experiencias de aprendizaje digital que conectan con las personas y generan resultados.</p>
 <div aria-label="Redes sociales" class="socials">
-<a aria-label="LinkedIn" href="https://www.linkedin.com/in/boris-mej%C3%ADa-botero-50421937?utm_source=share_via&utm_content=profile&utm_medium=member_android" rel="noopener" target="_blank">in</a>
-<a aria-label="Facebook" href="https://www.facebook.com/share/1FLLP5eCgK/" rel="noopener" target="_blank">f</a>
-<a aria-label="Instagram" href="https://www.instagram.com/vertice.formacion.profesional?igsh=MXNlZW04Nnhrbnl6ZA==" rel="noopener" target="_blank">ig</a>
-<a aria-label="YouTube" href="#">▶</a>
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/boris-mej%C3%ADa-botero-50421937?utm_source=share_via&utm_content=profile&utm_medium=member_android" rel="noopener" target="_blank"><img src="assets/icons/icons_linkedin.png" alt="LinkedIn"/></a>
+<a aria-label="Facebook" href="https://www.facebook.com/share/1FLLP5eCgK/" rel="noopener" target="_blank"><img src="assets/icons/icons_facebook.png" alt="Facebook"/></a>
+<a aria-label="Instagram" href="https://www.instagram.com/vertice.formacion.profesional?igsh=MXNlZW04Nnhrbnl6ZA==" rel="noopener" target="_blank"><img src="assets/icons/icons_instagram.png" alt="Instagram"/></a>
 </div>
 </div>
 <div>
