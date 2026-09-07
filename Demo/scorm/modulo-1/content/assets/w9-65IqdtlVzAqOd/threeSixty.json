@@ -1,0 +1,27 @@
+{
+  "version": "3.88.32574.0",
+  "course_id": "6NTnjL1RrVF",
+  "title": "causas_estres",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Untitled Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "5aeMFvmlVPG",
+      "title": "menu",
+      "scene_index": "1.1"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 980,
+    "height": 635
+  },
+  "stage": {
+    "width": 960,
+    "height": 540
+  }
+}

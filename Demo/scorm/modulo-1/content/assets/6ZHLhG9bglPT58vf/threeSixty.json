@@ -1,0 +1,32 @@
+{
+  "version": "3.88.32574.0",
+  "course_id": "5c1qAszCAsX",
+  "title": "3tres3",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Untitled Scene"
+    }
+  ],
+  "slides": [
+    {
+      "id": "6FG5Mx9UMQi",
+      "title": "Inicio",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "6j8t91uStSg",
+      "title": "Inicio",
+      "scene_index": "1.2"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 980,
+    "height": 635
+  },
+  "stage": {
+    "width": 960,
+    "height": 540
+  }
+}
