@@ -89,8 +89,14 @@ Luego:
 No se almacena la contraseña.
 
 
-## Iteración 2.1 - corrección de tracking Rise
+## Iteración 2.2 - corrección de tracking Rise
 
 El player ya no calcula el avance únicamente por scroll. Se inyectó `scorm/modulo-1/content/vertice-progress-bridge.js`, que lee el porcentaje que el propio contenido Rise muestra (por ejemplo `15% COMPLETA`), identifica la sección visible (`Sección 6 de 34`) y lo comunica al campus mediante `postMessage`. El campus guarda este valor en `localStorage` bajo la clave `verticeLmsStateV2`.
 
 El cálculo por DOM/scroll queda únicamente como respaldo.
+
+
+## Curso actual
+- La inteligencia artificial en la fabricación de un vehículo
+- Contenido Rise/Web extraído: 55 secciones detectadas en runtime-data.js.
+- LocalStorage usa la clave `verticeLmsStateV3` para iniciar el nuevo curso sin mezclar el avance del curso anterior.

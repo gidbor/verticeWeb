@@ -1,6 +1,6 @@
 (function(){
-  const KEY='verticeLmsStateV2';
-  const LEGACY_KEY='verticeLmsStateV1';
+  const KEY='verticeLmsStateV3';
+  const LEGACY_KEY='verticeLmsStateLegacy';
   const defaultState={
     version:2,
     user:{
@@ -16,10 +16,10 @@
       lastLoginAt:null
     },
     course:{
-      id:'fisiologia-reproductiva-porcina',
-      title:'Fisiología reproductiva porcina',
-      description:'Comprende los fundamentos anatómicos, hormonales y fisiológicos de la reproducción porcina mediante un módulo interactivo.',
-      category:'Producción porcina',
+      id:'ia-fabricacion-vehiculo',
+      title:'La inteligencia artificial en la fabricación de un vehículo',
+      description:'Explora cómo la inteligencia artificial transforma la producción automotriz mediante automatización, control de calidad, mantenimiento predictivo, personalización, pronóstico de demanda y seguridad.',
+      category:'Automotriz e inteligencia artificial',
       startDate:'2026-09-07',
       endDate:'2026-10-07',
       scorm:{
@@ -32,16 +32,16 @@
         values:{},
         sessionStartedAt:null,
         currentLessonId:null,
-        currentLessonTitle:'Introducción',
+        currentLessonTitle:'UT1 · Ventajas de la IA en la producción de automóviles',
         currentLessonIndex:0,
-        totalLessons:38,
+        totalLessons:55,
         visitedLessonIds:[],
         lastHref:null,
         trackingMode:'rise-reported',
         reportedProgress:0,
         packageSectionIndex:1,
-        packageSectionTotal:34,
-        packageSectionTitle:'Introducción'
+        packageSectionTotal:55,
+        packageSectionTitle:'UT1 · Ventajas de la IA en la producción de automóviles'
       },
       evaluation:{
         answers:{},
@@ -79,11 +79,11 @@
     sc.progress=clamp(Number(sc.progress)||0);
     sc.currentPosition=clamp(Number(sc.currentPosition)||0);
     sc.currentLessonIndex=Math.max(0,Number(sc.currentLessonIndex)||0);
-    sc.totalLessons=Math.max(1,Number(sc.totalLessons)||38);
+    sc.totalLessons=Math.max(1,Number(sc.totalLessons)||55);
     if(!Array.isArray(sc.visitedLessonIds))sc.visitedLessonIds=[];
     sc.reportedProgress=clamp(Number(sc.reportedProgress)||0);
     sc.packageSectionIndex=Math.max(1,Number(sc.packageSectionIndex)||1);
-    sc.packageSectionTotal=Math.max(1,Number(sc.packageSectionTotal)||34);
+    sc.packageSectionTotal=Math.max(1,Number(sc.packageSectionTotal)||55);
     sc.packageSectionTitle=String(sc.packageSectionTitle||sc.currentLessonTitle||'Introducción');
     if(sc.completed)sc.progress=100;
     return state;
